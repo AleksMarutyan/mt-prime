@@ -1,8 +1,0 @@
-{
-  "version": 2,
-  "name": "mt-prime-transport-2025",
-  "buildCommand": "pnpm run build",
-  "outputDirectory": "apps/web/.next",
-  "installCommand": "pnpm install --frozen-lockfile",
-  "framework": "nextjs"
-}
