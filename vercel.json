@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "name": "mt-prime-website",
+  "buildCommand": "pnpm run build",
+  "outputDirectory": "apps/web/.next",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "framework": "nextjs",
+  "nodeVersion": "20"
+}

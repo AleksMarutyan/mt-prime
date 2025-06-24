@@ -1,0 +1,91 @@
+{
+  "navigation": {
+    "products": "Produits",
+    "services": "Services",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Bienvenue dans notre boutique",
+    "subtitle": "Voici le lancement initial de notre site web ! Nous sommes ravis de partager nos produits et services avec vous. Ci-dessous, vous trouverez des codes QR que vous pouvez scanner avec votre téléphone pour consulter nos catalogues détaillés et nos informations.",
+    "shopNow": "Acheter maintenant",
+    "learnMore": "En savoir plus"
+  },
+  "qrSection": {
+    "title": "Scannez pour voir nos documents",
+    "subtitle": "Utilisez l'appareil photo de votre smartphone pour scanner ces codes QR et accéder instantanément à nos informations produits"
+  },
+  "qrCard": {
+    "howToScan": "📱 Comment scanner :",
+    "step1": "• Ouvrez l'appareil photo de votre téléphone",
+    "step2": "• Pointez l'appareil photo vers le code QR",
+    "step3": "• Appuyez sur la notification qui apparaît",
+    "step4": "• Ou utilisez une application de scanner QR",
+    "openDocument": "Ouvrir le document"
+  },
+  "features": {
+    "fastDelivery": {
+      "title": "Livraison rapide",
+      "description": "Expédition rapide et fiable à votre porte"
+    },
+    "qualityProducts": {
+      "title": "Produits de qualité",
+      "description": "Articles soigneusement sélectionnés avec garantie de qualité"
+    },
+    "support": {
+      "title": "Support 24/7",
+      "description": "Assistance clientèle disponible 24h/24"
+    }
+  },
+  "cta": {
+    "title": "Prêt à commencer ?",
+    "subtitle": "Rejoignez des milliers de clients satisfaits qui nous font confiance pour leurs besoins",
+    "button": "Contactez-nous aujourd'hui"
+  },
+  "footer": {
+    "companyName": "MT PRIME",
+    "companyDescription": "Votre partenaire de confiance pour des produits de qualité et un service exceptionnel.",
+    "quickLinks": "Liens rapides",
+    "support": "Support",
+    "connect": "Se connecter",
+    "copyright": "© 2025 MT PRIME. Tous droits réservés.",
+    "links": {
+      "products": "Produits",
+      "services": "Services",
+      "aboutUs": "À propos de nous",
+      "contact": "Contact",
+      "helpCenter": "Centre d'aide",
+      "shippingInfo": "Informations de livraison",
+      "returns": "Retours",
+      "faq": "FAQ",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "tooltips": {
+    "productsComingSoon": "🚧 Bientôt disponible - Fonctionnalité en développement",
+    "servicesComingSoon": "🚧 Bientôt disponible - Fonctionnalité en développement",
+    "aboutComingSoon": "🚧 Bientôt disponible - Fonctionnalité en développement",
+    "contactComingSoon": "🚧 Bientôt disponible - Fonctionnalité en développement",
+    "shopComingSoon": "🛒 Boutique bientôt disponible !",
+    "learnMoreComingSoon": "📚 Section En savoir plus bientôt disponible !",
+    "contactFormComingSoon": "📞 Formulaire de contact bientôt disponible !",
+    "productsPageComingSoon": "🛍️ Page produits bientôt disponible !",
+    "servicesPageComingSoon": "⚙️ Page services en développement",
+    "aboutPageComingSoon": "👥 Page à propos bientôt disponible",
+    "contactPageComingSoon": "📧 Page contact bientôt disponible",
+    "helpCenterComingSoon": "🆘 Centre d'aide en construction",
+    "shippingInfoComingSoon": "🚚 Informations de livraison bientôt disponibles",
+    "returnsComingSoon": "↩️ Politique de retour en développement",
+    "faqComingSoon": "❓ Section FAQ bientôt disponible",
+    "facebookComingSoon": "📘 Page Facebook bientôt disponible",
+    "twitterComingSoon": "🐦 Compte Twitter bientôt disponible",
+    "instagramComingSoon": "📸 Profil Instagram en développement",
+    "linkedinComingSoon": "💼 Page LinkedIn bientôt disponible"
+  },  "common": {
+    "loading": "Chargement...",
+    "chooseLanguage": "Choisir la langue"
+  }
+}

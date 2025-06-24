@@ -1,0 +1,91 @@
+{
+  "navigation": {
+    "products": "Products",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Welcome to Our Store",
+    "subtitle": "This is our initial website launch! We're excited to share our products and services with you. Below you'll find QR codes that you can scan with your phone to view our detailed catalogs and information.",
+    "shopNow": "Shop Now",
+    "learnMore": "Learn More"
+  },
+  "qrSection": {
+    "title": "Scan to View Our Documents",
+    "subtitle": "Use your smartphone camera to scan these QR codes and instantly access our product information"
+  },
+  "qrCard": {
+    "howToScan": "📱 How to scan:",
+    "step1": "• Open your phone's camera app",
+    "step2": "• Point camera at QR code", 
+    "step3": "• Tap the notification that appears",
+    "step4": "• Or use a QR scanner app",
+    "openDocument": "Open Document"
+  },
+  "features": {
+    "fastDelivery": {
+      "title": "Fast Delivery",
+      "description": "Quick and reliable shipping to your doorstep"
+    },
+    "qualityProducts": {
+      "title": "Quality Products", 
+      "description": "Carefully curated items with quality guarantee"
+    },
+    "support": {
+      "title": "24/7 Support",
+      "description": "Round-the-clock customer service assistance"
+    }
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Join thousands of satisfied customers who trust us with their needs",
+    "button": "Contact Us Today"
+  },
+  "footer": {
+    "companyName": "MT PRIME",
+    "companyDescription": "Your trusted partner for quality products and exceptional service.",
+    "quickLinks": "Quick Links",
+    "support": "Support",
+    "connect": "Connect",
+    "copyright": "© 2025 MT PRIME. All rights reserved.",
+    "links": {
+      "products": "Products",
+      "services": "Services", 
+      "aboutUs": "About Us",
+      "contact": "Contact",
+      "helpCenter": "Help Center",
+      "shippingInfo": "Shipping Info",
+      "returns": "Returns",
+      "faq": "FAQ",
+      "facebook": "Facebook",
+      "twitter": "Twitter", 
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "tooltips": {
+    "productsComingSoon": "🚧 Coming Soon - Feature in development",
+    "servicesComingSoon": "🚧 Coming Soon - Feature in development",
+    "aboutComingSoon": "🚧 Coming Soon - Feature in development",
+    "contactComingSoon": "🚧 Coming Soon - Feature in development",
+    "shopComingSoon": "🛒 Shop feature launching soon!",
+    "learnMoreComingSoon": "📚 Learn More section coming soon!",
+    "contactFormComingSoon": "📞 Contact form launching soon!",
+    "productsPageComingSoon": "🛍️ Products page coming soon!",
+    "servicesPageComingSoon": "⚙️ Services page in development",
+    "aboutPageComingSoon": "👥 About page launching soon",
+    "contactPageComingSoon": "📧 Contact page coming soon",
+    "helpCenterComingSoon": "🆘 Help Center under construction",
+    "shippingInfoComingSoon": "🚚 Shipping info coming soon",
+    "returnsComingSoon": "↩️ Returns policy in development", 
+    "faqComingSoon": "❓ FAQ section launching soon",
+    "facebookComingSoon": "📘 Facebook page coming soon",
+    "twitterComingSoon": "🐦 Twitter account launching soon",
+    "instagramComingSoon": "📸 Instagram profile in development",
+    "linkedinComingSoon": "💼 LinkedIn page coming soon"
+  },  "common": {
+    "loading": "Loading...",
+    "chooseLanguage": "Choose Language"
+  }
+}
