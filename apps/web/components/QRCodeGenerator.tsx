@@ -22,15 +22,20 @@ export default function QRCodeGenerator({ documentId, title, description }: QRCo
         const url = getQRCodeUrl(documentId, locale);
         console.log('Generated QR URL:', url); // Debug log
         
-        const qrDataUrl = await QRCode.toDataURL(url, {
-          width: 256, // Larger size for better scanning
-          margin: 4,  // More margin for better recognition
+        // Validate URL format
+        const urlPattern = /^https?:\/\/.+/;
+        if (!urlPattern.test(url)) {
+          console.error('Invalid URL format:', url);
+          throw new Error('Invalid URL format');
+        }
+          const qrDataUrl = await QRCode.toDataURL(url, {
+          width: 256,
+          margin: 2,
           color: {
             dark: '#000000',
             light: '#FFFFFF'
           },
-          errorCorrectionLevel: 'M', // Medium error correction
-          type: 'image/png'
+          errorCorrectionLevel: 'M'
         });
         setQrCodeUrl(qrDataUrl);
         setLoading(false);

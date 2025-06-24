@@ -18,8 +18,11 @@ export default function PDFViewer({ documentId }: PDFViewerProps) {
   const [pageNumber, setPageNumber] = useState<number>(1);
   const [scale, setScale] = useState<number>(1.0);
   const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);  const [viewMode, setViewMode] = useState<'all' | 'single'>('all'); // Default to all pages view
+  const [error, setError] = useState<string | null>(null);
+  const [viewMode, setViewMode] = useState<'all' | 'single'>('single'); // Default to single page for large PDFs
   const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [loadedPages, setLoadedPages] = useState<Set<number>>(new Set()); // Track loaded pages
+  const [pagesInView, setPagesInView] = useState<Set<number>>(new Set([1])); // Track pages in viewport
 
   const document = getPDFById(documentId);
   useEffect(() => {
@@ -52,17 +55,37 @@ export default function PDFViewer({ documentId }: PDFViewerProps) {
       setLoading(false);
     }
   }, [document]);
-
   const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
     setNumPages(numPages);
     setLoading(false);
     setError(null);
+    
+    // For large PDFs (>20 pages), automatically switch to single page view
+    if (numPages > 20) {
+      setViewMode('single');
+    }
+    
+    // Mark first page as loaded
+    setLoadedPages(new Set([1]));
   };
 
   const onDocumentLoadError = (error: Error) => {
     console.error('PDF load error:', error);
-    setError('Failed to load PDF document');
+    setError('Failed to load PDF document. The file might be too large or corrupted.');
     setLoading(false);
+  };
+
+  // Function to determine which pages should be rendered based on viewport
+  const getVisiblePages = () => {
+    if (viewMode === 'single') {
+      return [pageNumber];
+    } else {
+      // For 'all' view, render only pages near current page to save memory
+      const range = isMobile ? 2 : 3; // Render fewer pages on mobile
+      const start = Math.max(1, pageNumber - range);
+      const end = Math.min(numPages, pageNumber + range);
+      return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+    }
   };
 
   const goToPrevPage = () => {
