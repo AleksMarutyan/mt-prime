@@ -45,10 +45,16 @@
   "footer": {
     "companyName": "MT PRIME",
     "companyDescription": "Votre partenaire de confiance pour des produits de qualité et un service exceptionnel.",
+    "companyAddress": "Adresse :",
+    "address": "143 Av. Francis Tonner, 06150 Cannes La Bocca, France",
+    "vat": "TVA : FR82 980 891 345",
+    "siren": "SIREN : 980 891 345",
+    "siret": "SIRET : 980 891 345 00012",
     "quickLinks": "Liens rapides",
+    "contact": "Contact",
     "support": "Support",
     "connect": "Se connecter",
-    "copyright": "© 2025 MT PRIME. Tous droits réservés.",
+    "copyright": "© 2025 MT PRIME Logistique. Tous droits réservés.",
     "links": {
       "products": "Produits",
       "services": "Services",
@@ -63,6 +69,14 @@
       "instagram": "Instagram",
       "linkedin": "LinkedIn"
     }
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "companyInfo": "Informations sur l'entreprise",
+    "legalInfo": "Informations légales",
+    "getInTouch": "Prendre contact",
+    "formComingSoon": "Formulaire de contact bientôt disponible",
+    "formDescription": "Nous travaillons sur un formulaire de contact. Pour l'instant, veuillez utiliser les informations à gauche pour nous joindre."
   },
   "tooltips": {
     "productsComingSoon": "🚧 Bientôt disponible - Fonctionnalité en développement",
@@ -83,7 +97,10 @@
     "facebookComingSoon": "📘 Page Facebook bientôt disponible",
     "twitterComingSoon": "🐦 Compte Twitter bientôt disponible",
     "instagramComingSoon": "📸 Profil Instagram en développement",
-    "linkedinComingSoon": "💼 Page LinkedIn bientôt disponible"
+    "linkedinComingSoon": "💼 Page LinkedIn bientôt disponible",
+    "vatTooltip": "Numéro d'identification TVA pour les transactions dans l'UE",
+    "sirenTooltip": "SIREN : Numéro d'enregistrement de l'entreprise - Identifiant unique à 9 chiffres pour l'entité commerciale",
+    "siretTooltip": "SIRET : Identifiant d'établissement - Numéro à 14 chiffres identifiant cette localisation commerciale spécifique"
   },  "common": {
     "loading": "Chargement...",
     "chooseLanguage": "Choisir la langue"

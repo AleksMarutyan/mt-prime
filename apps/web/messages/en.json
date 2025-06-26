@@ -45,10 +45,16 @@
   "footer": {
     "companyName": "MT PRIME",
     "companyDescription": "Your trusted partner for quality products and exceptional service.",
+    "companyAddress": "Address:",
+    "address": "143 Av. Francis Tonner, 06150 Cannes La Bocca, France",
+    "vat": "VAT: FR82 980 891 345",
+    "siren": "SIREN: 980 891 345",
+    "siret": "SIRET: 980 891 345 00012",
     "quickLinks": "Quick Links",
+    "contact": "Contact",
     "support": "Support",
     "connect": "Connect",
-    "copyright": "© 2025 MT PRIME. All rights reserved.",
+    "copyright": "© 2025 MT PRIME Logistique. All rights reserved.",
     "links": {
       "products": "Products",
       "services": "Services", 
@@ -63,6 +69,14 @@
       "instagram": "Instagram",
       "linkedin": "LinkedIn"
     }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "companyInfo": "Company Information",
+    "legalInfo": "Legal Information",
+    "getInTouch": "Get in Touch",
+    "formComingSoon": "Contact Form Coming Soon",
+    "formDescription": "We're working on a contact form. For now, please use the information on the left to reach us."
   },
   "tooltips": {
     "productsComingSoon": "🚧 Coming Soon - Feature in development",
@@ -83,7 +97,10 @@
     "facebookComingSoon": "📘 Facebook page coming soon",
     "twitterComingSoon": "🐦 Twitter account launching soon",
     "instagramComingSoon": "📸 Instagram profile in development",
-    "linkedinComingSoon": "💼 LinkedIn page coming soon"
+    "linkedinComingSoon": "💼 LinkedIn page coming soon",
+    "vatTooltip": "Value Added Tax identification number for EU transactions",
+    "sirenTooltip": "SIREN: Company Registration Number - Unique 9-digit identifier for the business entity",
+    "siretTooltip": "SIRET: Establishment ID - 14-digit number identifying this specific business location"
   },  "common": {
     "loading": "Loading...",
     "chooseLanguage": "Choose Language"
