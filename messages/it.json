@@ -1,0 +1,122 @@
+{
+  "navigation": {
+    "home": "Home",
+    "products": "Prodotti",
+    "services": "Servizi",
+    "about": "Chi siamo",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "title": "Benvenuti nel nostro negozio",
+    "subtitle": "Questo è il lancio iniziale del nostro sito web! Siamo entusiasti di condividere i nostri prodotti e servizi con voi. Di seguito troverete i codici QR che potete scansionare con il vostro telefono per visualizzare i nostri cataloghi dettagliati e le informazioni.",
+    "shopNow": "Acquista ora",
+    "learnMore": "Scopri di più"
+  },
+  "qrSection": {
+    "title": "Scansiona per vedere i nostri documenti",
+    "subtitle": "Usa la fotocamera del tuo smartphone per scansionare questi codici QR e accedere istantaneamente alle informazioni sui nostri prodotti"
+  },
+  "qrCard": {
+    "howToScan": "📱 Come scansionare:",
+    "step1": "• Apri l'app fotocamera del tuo telefono",
+    "step2": "• Punta la fotocamera verso il codice QR",
+    "step3": "• Tocca la notifica che appare",
+    "step4": "• Oppure usa un'app scanner QR",
+    "openDocument": "Apri documento"
+  },
+  "features": {
+    "fastDelivery": {
+      "title": "Consegna veloce",
+      "description": "Spedizione rapida e affidabile a casa tua"
+    },
+    "qualityProducts": {
+      "title": "Prodotti di qualità",
+      "description": "Articoli accuratamente selezionati con garanzia di qualità"
+    },
+    "support": {
+      "title": "Supporto 24/7",
+      "description": "Assistenza clienti disponibile 24 ore su 24"
+    }
+  },
+  "cta": {
+    "title": "Pronto per iniziare?",
+    "subtitle": "Unisciti a migliaia di clienti soddisfatti che si fidano di noi per le loro esigenze",
+    "button": "Contattaci oggi"
+  },
+  "footer": {
+    "companyName": "MT PRIME",
+    "companyDescription": "Il tuo partner di fiducia per prodotti di qualità e servizio eccezionale.",
+    "companyAddress": "Indirizzo:",
+    "address": "143 Av. Francis Tonner, 06150 Cannes La Bocca, France",
+    "vat": "IVA: FR82 980 891 345",
+    "siren": "SIREN: 980 891 345",
+    "siret": "SIRET: 980 891 345 00012",
+    "quickLinks": "Link rapidi",
+    "contact": "Contatto",
+    "support": "Supporto",
+    "connect": "Connettiti",
+    "copyright": "© 2025 MT PRIME Logistique. Tutti i diritti riservati.",
+    "links": {
+      "products": "Prodotti",
+      "services": "Servizi",
+      "aboutUs": "Chi siamo",
+      "contact": "Contatti",
+      "helpCenter": "Centro assistenza",
+      "shippingInfo": "Informazioni spedizione",
+      "returns": "Resi",
+      "faq": "FAQ",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "contact": {
+    "title": "Contattaci",
+    "companyInfo": "Informazioni aziendali",
+    "legalInfo": "Informazioni legali",
+    "getInTouch": "Mettiti in contatto",
+    "formComingSoon": "Modulo di contatto in arrivo",
+    "formDescription": "Stiamo lavorando su un modulo di contatto. Per ora, utilizza le informazioni a sinistra per raggiungerci."
+  },
+  "tooltips": {
+    "productsComingSoon": "🚧 Prossimamente - Funzionalità in sviluppo",
+    "servicesComingSoon": "Servizi in arrivo",
+    "aboutComingSoon": "Pagina Chi siamo in arrivo",
+    "contactComingSoon": "🚧 Prossimamente - Funzionalità in sviluppo",
+    "shopComingSoon": "🛒 Negozio in arrivo!",
+    "learnMoreComingSoon": "📚 Sezione Scopri di più in arrivo!",
+    "contactFormComingSoon": "📞 Modulo di contatto in arrivo!",
+    "productsPageComingSoon": "🛍️ Pagina prodotti in arrivo!",
+    "servicesPageComingSoon": "⚙️ Pagina servizi in sviluppo",
+    "aboutPageComingSoon": "👥 Pagina chi siamo in arrivo",
+    "contactPageComingSoon": "📧 Pagina contatti in arrivo",
+    "helpCenterComingSoon": "🆘 Centro assistenza in costruzione",
+    "shippingInfoComingSoon": "🚚 Informazioni spedizione in arrivo",
+    "returnsComingSoon": "↩️ Politica resi in sviluppo",
+    "faqComingSoon": "❓ Sezione FAQ in arrivo",
+    "facebookComingSoon": "📘 Pagina Facebook in arrivo",
+    "twitterComingSoon": "🐦 Account Twitter in arrivo",
+    "instagramComingSoon": "📸 Profilo Instagram in sviluppo",
+    "linkedinComingSoon": "💼 Pagina LinkedIn in arrivo",
+    "vatTooltip": "Numero di identificazione IVA per le transazioni nell'UE",
+    "sirenTooltip": "SIREN: Numero di registrazione dell'azienda - Identificativo unico a 9 cifre per l'entità commerciale",
+    "siretTooltip": "SIRET: ID struttura - Numero a 14 cifre che identifica questa specifica sede commerciale"
+  },
+  "common": {
+    "loading": "Caricamento...",
+    "chooseLanguage": "Scegli lingua",
+    "close": "Chiudi"
+  },
+  "products": {
+    "title": "I Nostri Prodotti",
+    "subtitle": "Scopri la nostra collezione curata di prodotti premium, selezionati con cura per qualità e stile.",
+    "loadMore": "Carica Altri Prodotti",
+    "loading": "Caricamento in corso...",
+    "addToCart": "Aggiungi al Carrello",
+    "addToWishlist": "Aggiungi ai Preferiti",
+    "additionalInfo": "Informazioni Aggiuntive",
+    "category": "Categoria",
+    "sku": "Codice Articolo"
+  }
+}

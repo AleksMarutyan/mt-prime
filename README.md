@@ -1,31 +1,37 @@
-# shadcn/ui monorepo template
+# MT Prime - Next.js App with Prisma
 
-This template is for creating a monorepo with shadcn/ui.
+A Next.js application with Prisma database and shadcn/ui components.
 
-## Usage
-
-```bash
-pnpm dlx shadcn@latest init
-```
-
-## Adding components
-
-To add components to your app, run the following command at the root of your `web` app:
+## Getting Started
 
 ```bash
-pnpm dlx shadcn@latest add button -c apps/web
+# Install dependencies
+pnpm install
+
+# Setup database
+pnpm run db:generate
+pnpm run db:push
+
+# Start development server
+pnpm dev
 ```
 
-This will place the ui components in the `packages/ui/src/components` directory.
+## Adding shadcn/ui components
 
-## Tailwind
-
-Your `tailwind.config.ts` and `globals.css` are already set up to use the components from the `ui` package.
+```bash
+npx shadcn@latest add button
+```
 
 ## Using components
 
-To use the components in your app, import them from the `ui` package.
-
 ```tsx
-import { Button } from "@workspace/ui/components/button"
+import { Button } from "@/components/ui/button";
 ```
+
+## API Routes
+
+- GET `/api/products` - Get all products
+- POST `/api/products` - Create a product
+- GET `/api/products/[id]` - Get single product
+- PUT `/api/products/[id]` - Update product
+- DELETE `/api/products/[id]` - Delete product

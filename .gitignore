@@ -1,36 +1,97 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # Dependencies
-node_modules
-.pnp
-.pnp.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Local env files
+# Next.js
+.next/
+out/
+build/
+dist/
+
+# Production
+*.tgz
+*.tar.gz
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variable files
 .env
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
-
-# Testing
-coverage
-
-# Turbo
-.turbo
+.env.local
 
 # Vercel
 .vercel
 
-# Build Outputs
-.next/
-out/
-build
-dist
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
 
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
-# Debug
-npm-debug.log*
-
-# Misc
+# OS generated files
 .DS_Store
-*.pem
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Turbopack cache
+.turbo/
+
+# Prisma
+prisma/migrations/

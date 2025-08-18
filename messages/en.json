@@ -1,0 +1,122 @@
+{
+  "navigation": {
+    "home": "Home",
+    "products": "Products",
+    "contact": "Contact",
+    "services": "Services",
+    "about": "About"
+  },
+  "hero": {
+    "title": "Welcome to Our Store",
+    "subtitle": "This is our initial website launch! We're excited to share our products and services with you. Below you'll find QR codes that you can scan with your phone to view our detailed catalogs and information.",
+    "shopNow": "Shop Now",
+    "learnMore": "Learn More"
+  },
+  "qrSection": {
+    "title": "Scan to View Our Documents",
+    "subtitle": "Use your smartphone camera to scan these QR codes and instantly access our product information"
+  },
+  "qrCard": {
+    "howToScan": "📱 How to scan:",
+    "step1": "• Open your phone's camera app",
+    "step2": "• Point camera at QR code",
+    "step3": "• Tap the notification that appears",
+    "step4": "• Or use a QR scanner app",
+    "openDocument": "Open Document"
+  },
+  "features": {
+    "fastDelivery": {
+      "title": "Fast Delivery",
+      "description": "Quick and reliable shipping to your doorstep"
+    },
+    "qualityProducts": {
+      "title": "Quality Products",
+      "description": "Carefully curated items with quality guarantee"
+    },
+    "support": {
+      "title": "24/7 Support",
+      "description": "Round-the-clock customer service assistance"
+    }
+  },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Join thousands of satisfied customers who trust us with their needs",
+    "button": "Contact Us Today"
+  },
+  "footer": {
+    "companyName": "MT PRIME",
+    "companyDescription": "Your trusted partner for quality products and exceptional service.",
+    "companyAddress": "Address:",
+    "address": "143 Av. Francis Tonner, 06150 Cannes La Bocca, France",
+    "vat": "VAT: FR82 980 891 345",
+    "siren": "SIREN: 980 891 345",
+    "siret": "SIRET: 980 891 345 00012",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "support": "Support",
+    "connect": "Connect",
+    "copyright": "© 2025 MT PRIME Logistique. All rights reserved.",
+    "links": {
+      "products": "Products",
+      "services": "Services",
+      "aboutUs": "About Us",
+      "contact": "Contact",
+      "helpCenter": "Help Center",
+      "shippingInfo": "Shipping Info",
+      "returns": "Returns",
+      "faq": "FAQ",
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "companyInfo": "Company Information",
+    "legalInfo": "Legal Information",
+    "getInTouch": "Get in Touch",
+    "formComingSoon": "Contact Form Coming Soon",
+    "formDescription": "We're working on a contact form. For now, please use the information on the left to reach us."
+  },
+  "tooltips": {
+    "productsComingSoon": "🚧 Coming Soon - Feature in development",
+    "servicesComingSoon": "Services coming soon",
+    "aboutComingSoon": "About page coming soon",
+    "contactComingSoon": "🚧 Coming Soon - Feature in development",
+    "shopComingSoon": "🛒 Shop feature launching soon!",
+    "learnMoreComingSoon": "📚 Learn More section coming soon!",
+    "contactFormComingSoon": "📞 Contact form launching soon!",
+    "productsPageComingSoon": "🛍️ Products page coming soon!",
+    "servicesPageComingSoon": "⚙️ Services page in development",
+    "aboutPageComingSoon": "👥 About page launching soon",
+    "contactPageComingSoon": "📧 Contact page coming soon",
+    "helpCenterComingSoon": "🆘 Help Center under construction",
+    "shippingInfoComingSoon": "🚚 Shipping info coming soon",
+    "returnsComingSoon": "↩️ Returns policy in development",
+    "faqComingSoon": "❓ FAQ section launching soon",
+    "facebookComingSoon": "📘 Facebook page coming soon",
+    "twitterComingSoon": "🐦 Twitter account launching soon",
+    "instagramComingSoon": "📸 Instagram profile in development",
+    "linkedinComingSoon": "💼 LinkedIn page coming soon",
+    "vatTooltip": "Value Added Tax identification number for EU transactions",
+    "sirenTooltip": "SIREN: Company Registration Number - Unique 9-digit identifier for the business entity",
+    "siretTooltip": "SIRET: Establishment ID - 14-digit number identifying this specific business location"
+  },
+  "common": {
+    "loading": "Loading...",
+    "chooseLanguage": "Choose Language",
+    "close": "Close"
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Discover our curated collection of premium products, carefully selected for quality and style.",
+    "loadMore": "Load More Products",
+    "loading": "Loading more...",
+    "addToCart": "Add to Cart",
+    "addToWishlist": "Add to Wishlist",
+    "additionalInfo": "Additional Information",
+    "category": "Category",
+    "sku": "SKU"
+  }
+}
