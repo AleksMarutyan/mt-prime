@@ -1,29 +1,36 @@
 // hooks/useProducts.ts
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { Product } from "@/types/products";
-import { PaginationParams } from "@/types/pagination";
+import { PaginatedResponse, PaginatedRequest } from "@/types/pagination";
 import { buildQueryString } from "@/utils/query-params";
 
-export function useProductsInfiniteQuery(
-  baseParams?: Omit<PaginationParams, "_start" | "_end">
-) {
+export function useProductsInfiniteQuery(baseParams?: PaginatedRequest) {
   return useInfiniteQuery({
     queryKey: ["products", baseParams],
-    queryFn: async ({ pageParam = 0 }): Promise<Product[]> => {
-      const params: PaginationParams = {
+    queryFn: async ({ pageParam = 1 }): Promise<PaginatedResponse<Product>> => {
+      // Use page and pageSize from baseParams or defaults
+      const pageSize = baseParams?.pageSize ?? 10;
+      const page = pageParam;
+
+      // Calculate _start and _end for backend
+      const _start = (page - 1) * pageSize;
+      const _end = _start + pageSize;
+
+      const params = {
         ...baseParams,
-        _start: pageParam,
-        _end: pageParam + 10,
+        _start,
+        _end,
       };
 
       const response = await fetch(`/api/products${buildQueryString(params)}`);
       if (!response.ok) throw new Error("Failed to fetch products");
-      return response.json();
+      const data = await response.json();
+      return data;
     },
-    getNextPageParam: (lastPage, allPages) => {
-      const currentCount = allPages.flat().length;
-      return lastPage.length === 10 ? currentCount : undefined;
+    getNextPageParam: (lastPage) => {
+      const { page, pageSize, total } = lastPage;
+      return page * pageSize < total ? page + 1 : undefined;
     },
-    initialPageParam: 0,
+    initialPageParam: baseParams?.page ?? 1,
   });
 }

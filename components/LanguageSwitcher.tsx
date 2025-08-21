@@ -127,7 +127,6 @@ export default function LanguageSwitcher() {
       {" "}
       <button
         onClick={() => {
-          console.log("Globe button clicked, isOpen:", isOpen);
           setIsOpen(!isOpen);
         }}
         disabled={isPending}
@@ -183,7 +182,6 @@ export default function LanguageSwitcher() {
               <button
                 key={loc}
                 onClick={() => {
-                  console.log("Language button clicked:", loc);
                   switchLocale(loc);
                 }}
                 disabled={isPending}

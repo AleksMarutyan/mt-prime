@@ -34,11 +34,9 @@ export function ProductModal({ product, isOpen, onClose }: ProductModalProps) {
   const t = useTranslations();
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  // Get localized content
   const name = product.names[locale] || "";
   const description = product.descriptions[locale] || "";
 
-  console.log("ProductModal - Selected Product:", product);
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="sm:max-w-3xl bg-gray-50 border border-gray-100 p-0">

@@ -5,6 +5,12 @@ export type PaginatedResponse<T> = {
   pageSize: number;
 };
 
+export type PaginatedRequest = {
+  page?: number;
+  pageSize?: number;
+  sort?: string;
+  order?: "ASC" | "DESC";
+};
 // Use React Admin params everywhere
 export type PaginationParams = {
   _start?: number;

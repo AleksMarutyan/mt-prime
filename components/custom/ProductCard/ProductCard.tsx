@@ -4,7 +4,6 @@ import { Card, CardContent } from "@/components/shadcn/card";
 import { Product } from "@/types/products";
 import { ShoppingCart, Heart } from "lucide-react";
 import { useLocale } from "next-intl";
-import Link from "next/link";
 import { useState } from "react";
 
 export function ProductCard({
@@ -31,7 +30,7 @@ export function ProductCard({
         {/* Category badge */}
         <Badge
           variant="secondary"
-          className="absolute top-3 left-3 bg-white text-black font-medium z-10 py-1.5 px-3 rounded-full transition-colors group-hover:bg-primary group-hover:text-white"
+          className="absolute top-3 left-3 bg-white text-black font-medium z-10 py-1.5 px-3 rounded-full transition-colors"
         >
           {product.category}
         </Badge>
@@ -79,7 +78,7 @@ export function ProductCard({
           <Button
             variant="outline"
             size="sm"
-            className="bg-white border-gray-300 text-gray-800 transition-colors duration-300 "
+            className="bg-white border-gray-300 text-gray-800 transition-colors duration-300 group-hover:bg-gray-100 hover:bg-gray-100 border-gray-300 hover:border-gray-300 group-hover:border-gray-300"
             onClick={(e) => {
               e.stopPropagation();
             }}
