@@ -29,7 +29,9 @@ export function useProductsInfiniteQuery(baseParams?: PaginatedRequest) {
     },
     getNextPageParam: (lastPage) => {
       const { page, pageSize, total } = lastPage;
-      return page * pageSize < total ? page + 1 : undefined;
+      return (page ?? 0) * (pageSize ?? 10) < total
+        ? (page ?? 0) + 1
+        : undefined;
     },
     initialPageParam: baseParams?.page ?? 1,
   });

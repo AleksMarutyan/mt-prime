@@ -36,7 +36,7 @@ export default function ProductsPage() {
     { pageSize, page: currentPage }
   );
 
-  const products = data?.pages ? data.pages.flatMap((page) => page.items) : [];
+  const products = data?.pages ? data.pages.flatMap((page) => page.data) : [];
   const total = data?.pages?.[0]?.total ?? 0;
   const t = useTranslations();
 

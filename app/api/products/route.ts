@@ -8,7 +8,9 @@ const prisma = new PrismaClient();
 
 export async function GET(
   request: NextRequest
-): Promise<NextResponse<PaginatedResponse<Product> | ApiResponse<null>>> {
+): Promise<
+  NextResponse<PaginatedResponse<Product> | Product[] | ApiResponse<null>>
+> {
   try {
     const { searchParams } = new URL(request.url);
 
@@ -46,12 +48,32 @@ export async function GET(
 
     const total = await prisma.product.count();
 
-    return NextResponse.json({
-      items: products,
-      total,
-      page,
-      pageSize,
-    });
+    const headerReferer = request.headers.get("referer");
+    const isAdmin =
+      headerReferer?.includes("/admin") ||
+      headerReferer?.includes("/en/admin") || // add your admin paths if needed
+      headerReferer?.includes("/fr/admin") ||
+      headerReferer?.includes("/it/admin");
+
+    const responseBody = isAdmin
+      ? { data: products, total }
+      : { data: products, total, page, pageSize };
+
+    if (isAdmin) {
+      // React-admin specific response format
+      const response = NextResponse.json(products); // Return array directly, not wrapped in data
+      response.headers.set("X-Total-Count", total.toString());
+      response.headers.set("Access-Control-Expose-Headers", "X-Total-Count");
+      return response;
+    } else {
+      // Regular API response
+      return NextResponse.json({
+        data: products,
+        total,
+        page,
+        pageSize,
+      });
+    }
   } catch (error) {
     console.error("API Error:", error);
     return NextResponse.json<ApiResponse<null>>(
@@ -67,8 +89,6 @@ export async function POST(
   try {
     const body: CreateProductInput = await request.json();
     const { names, descriptions, price, category, imagesUrls } = body;
-
-    console.log("Creating product with data:", body);
 
     const product = await prisma.product.create({
       data: {
