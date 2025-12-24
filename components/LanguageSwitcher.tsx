@@ -21,13 +21,11 @@ const FlagIcon = ({
 }) => {
   return (
     <div
-      className={`w-6 h-4 rounded border border-gray-300/50 overflow-hidden shadow-sm transition-transform duration-200 ${className}`}
+      className={`w-6 h-4 rounded border border-gray-600/50 overflow-hidden shadow-sm transition-transform duration-200 ${className}`}
     >
-      {" "}
       {locale === "en" && (
         <div className="w-full h-full relative bg-blue-800">
           {/* Union Jack - Corrected diagonal lines */}
-
           <div className="absolute inset-0">
             <svg
               width="100%"
@@ -36,27 +34,23 @@ const FlagIcon = ({
               className="absolute inset-0"
             >
               <rect width="24" height="16" fill="#012169" />
-
               {/* White diagonals (St. Andrew) */}
               <path
                 d="M0,0 L24,16 M24,0 L0,16"
                 stroke="white"
                 strokeWidth="2.5"
               />
-
               {/* Red diagonals (St. Patrick) - extending to corners */}
               <path d="M0,0 L11,8" stroke="#C8102E" strokeWidth="1.2" />
               <path d="M13,8 L24,16" stroke="#C8102E" strokeWidth="1.2" />
               <path d="M24,0 L13,8" stroke="#C8102E" strokeWidth="1.2" />
               <path d="M11,8 L0,16" stroke="#C8102E" strokeWidth="1.2" />
-
               {/* White cross base */}
               <path
                 d="M0,8 L24,8 M12,0 L12,16"
                 stroke="white"
                 strokeWidth="3"
               />
-
               {/* Red cross (St. George) */}
               <path
                 d="M0,8 L24,8 M12,0 L12,16"
@@ -90,6 +84,7 @@ export default function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
   const t = useTranslations();
+
   const switchLocale = (newLocale: string) => {
     console.log(
       "switchLocale called with:",
@@ -124,18 +119,16 @@ export default function LanguageSwitcher() {
 
   return (
     <div className="relative z-50">
-      {" "}
       <button
         onClick={() => {
           setIsOpen(!isOpen);
         }}
         disabled={isPending}
         title="Change language / Changer de langue / Cambia lingua"
-        className="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 hover:text-gray-900 transition-all duration-200 backdrop-blur-md bg-white/60 border border-gray-200/50 rounded-lg hover:bg-white/80 hover:border-gray-300/60 disabled:opacity-50 hover:shadow-md"
+        className="flex items-center gap-2 px-3 py-2 text-sm text-gray-300 hover:text-[#fe9927] transition-all duration-200 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg hover:bg-[#252525] hover:border-[#fe9927] disabled:opacity-50 hover:shadow-lg hover:shadow-[#fe9927]/10"
       >
-        {" "}
         {isPending ? (
-          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-gray-400"></div>
+          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-[#fe9927]"></div>
         ) : (
           <FlagIcon locale={locale} />
         )}
@@ -161,23 +154,25 @@ export default function LanguageSwitcher() {
           />
         </svg>
       </button>
+
       {isOpen && (
         <>
-          {" "}
           {/* Backdrop */}
           <div
             className="fixed inset-0 z-40"
             onClick={() => setIsOpen(false)}
           />
-          {/* Dropdown */}{" "}
-          <div className="absolute right-0 mt-2 py-1 w-48 backdrop-blur-md bg-white/95 border border-gray-200/50 rounded-lg shadow-2xl z-50">
-            {/* Header */}{" "}
-            <div className="px-4 py-2 border-b border-gray-100/50">
-              <div className="flex items-center gap-2 text-xs text-gray-500 font-medium uppercase tracking-wider">
+
+          {/* Dropdown */}
+          <div className="absolute right-0 mt-2 py-1 w-48 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg shadow-2xl z-50">
+            {/* Header */}
+            <div className="px-4 py-2 border-b border-[#2a2a2a]">
+              <div className="flex items-center gap-2 text-xs text-gray-400 font-medium uppercase tracking-wider">
                 <Globe className="h-3 w-3" />
                 <span>{t("common.chooseLanguage")}</span>
               </div>
-            </div>{" "}
+            </div>
+
             {routing.locales.map((loc) => (
               <button
                 key={loc}
@@ -185,13 +180,12 @@ export default function LanguageSwitcher() {
                   switchLocale(loc);
                 }}
                 disabled={isPending}
-                className={`w-full px-4 py-3 text-left text-sm hover:bg-gray-100/50 transition-all duration-200 flex items-center gap-3 disabled:opacity-50 group ${
+                className={`w-full px-4 py-3 text-left text-sm hover:bg-[#252525] transition-all duration-200 flex items-center gap-3 disabled:opacity-50 group ${
                   loc === locale
-                    ? "bg-blue-50/70 text-blue-900 font-medium"
-                    : "text-gray-700 hover:text-gray-900"
+                    ? "bg-[#fe9927]/10 text-[#fe9927] font-medium"
+                    : "text-gray-300 hover:text-white"
                 }`}
               >
-                {" "}
                 <div className="flex-shrink-0">
                   <FlagIcon locale={loc} className="group-hover:scale-110" />
                 </div>
@@ -205,7 +199,7 @@ export default function LanguageSwitcher() {
                 </div>
                 {loc === locale && (
                   <div className="flex-shrink-0">
-                    <Check className="w-4 h-4 text-blue-600" />
+                    <Check className="w-4 h-4 text-[#fe9927]" />
                   </div>
                 )}
               </button>

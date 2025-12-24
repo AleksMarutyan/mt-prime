@@ -7,39 +7,40 @@ import { authProvider } from "@/lib/auth-provider";
 import dynamic from "next/dynamic";
 
 const AdminPanel = dynamic(
-  () =>
-    import("react-admin").then((mod) => {
-      const { Admin, Resource, defaultTheme } = mod;
-      const jsonServerProvider = require("ra-data-json-server").default;
+  async () => {
+    const { Admin, Resource, defaultTheme } = await import("react-admin");
+    const jsonServerProvider = (await import("ra-data-json-server")).default;
 
-      const dataProvider = jsonServerProvider("/api");
+    const dataProvider = jsonServerProvider("/api");
 
-      // Force light theme only
-      const lightTheme = {
-        ...defaultTheme,
-        palette: {
-          ...defaultTheme.palette,
-          mode: "light" as "light",
-        },
-      };
+    // Force light theme only
+    const lightTheme = {
+      ...defaultTheme,
+      palette: {
+        ...defaultTheme.palette,
+        mode: "light" as const,
+      },
+    };
 
-      return () => (
-        <Admin
-          authProvider={authProvider}
-          dataProvider={dataProvider}
-          title="MT Prime Admin"
-          theme={lightTheme}
-          darkTheme={null} // Disable dark theme
-        >
-          <Resource
-            name="products"
-            list={ProductsList}
-            create={ProductCreate}
-            edit={ProductEdit}
-          />
-        </Admin>
-      );
-    }),
+    const AdminComponent = () => (
+      <Admin
+        authProvider={authProvider}
+        dataProvider={dataProvider}
+        title="MT Prime Admin"
+        theme={lightTheme}
+        darkTheme={null}
+      >
+        <Resource
+          name="products"
+          list={ProductsList}
+          create={ProductCreate}
+          edit={ProductEdit}
+        />
+      </Admin>
+    );
+
+    return AdminComponent;
+  },
   { ssr: false }
 );
 

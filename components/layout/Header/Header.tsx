@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import LanguageSwitcher from "../../LanguageSwitcher";
@@ -9,6 +9,7 @@ import Tooltip from "../../Tooltip";
 export function Header() {
   const t = useTranslations();
   const pathname = usePathname();
+  const locale = useLocale();
 
   // Helper function to check if current page is active
   const isActive = (path: string) => {
@@ -19,72 +20,72 @@ export function Header() {
     );
   };
 
+  // Helper function to get localized link
+  const getLocalizedPath = (path: string) => {
+    return `/${locale}${path}`;
+  };
+
   // Active link styles
   const getLinkClassName = (path: string) => {
     const baseClass =
-      "transition-all duration-300 relative px-3 py-2 rounded-lg";
-    const inactiveClass = "text-gray-700 hover:text-gray-900 hover:bg-white/40";
-    const activeClass = "text-blue-600 bg-blue-50 shadow-sm font-medium";
+      "transition-all duration-300 relative px-4 py-2 rounded-lg font-medium";
+    const inactiveClass =
+      "text-gray-300 hover:text-[#fe9927] hover:bg-[#101119]";
+    const activeClass =
+      "text-[#fe9927] bg-[#101119] shadow-lg shadow-[#fe9927]/20";
 
     return `${baseClass} ${isActive(path) ? activeClass : inactiveClass}`;
   };
 
   return (
-    <header className="relative z-50">
-      <div className="backdrop-blur-md bg-white/60 border-b border-gray-200/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
-            <div className="flex items-center gap-3">
+    <header className="relative z-50 bg-[#1a1a1a] border-b border-[#2a2a2a]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4">
+          <div className="flex items-center gap-3">
+            <Link
+              href={getLocalizedPath("/")}
+              className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            >
+              <img
+                alt="MT PRIME Logo"
+                src="/logo-clean.svg"
+                className="h-12 w-auto brightness-0 invert"
+              />
+            </Link>
+          </div>
+
+          <div className="flex items-center gap-6">
+            <nav className="hidden md:flex items-center space-x-1">
               <Link
-                href="/"
-                className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+                href={getLocalizedPath("/delivery")}
+                className={getLinkClassName("/delivery")}
               >
-                <img
-                  alt="MT PRIME Logo"
-                  src="/logo-clean.svg"
-                  className="h-10 w-auto"
-                />
+                {t("navigation.delivery")}
               </Link>
-            </div>
 
-            <div className="flex items-center gap-4">
-              <nav className="hidden md:flex items-center space-x-2">
-                <Link href="/" className={getLinkClassName("/")}>
-                  {t("navigation.home")}
-                </Link>
+              <Link
+                href={getLocalizedPath("/shop")}
+                className={getLinkClassName("/shop")}
+              >
+                {t("navigation.shop")}
+              </Link>
 
-                <Link
-                  href="/products"
-                  className={getLinkClassName("/products")}
-                >
-                  {t("navigation.products")}
-                </Link>
+              <Link
+                href={getLocalizedPath("/products")}
+                className={getLinkClassName("/products")}
+              >
+                {t("navigation.catalogs")}
+              </Link>
 
-                <Link href="/contact" className={getLinkClassName("/contact")}>
-                  {t("navigation.contact")}
-                </Link>
+              <Link
+                href={getLocalizedPath("/contact")}
+                className={getLinkClassName("/contact")}
+              >
+                {t("navigation.contact")}
+              </Link>
+            </nav>
 
-                <Tooltip content={t("tooltips.servicesComingSoon")}>
-                  <button
-                    disabled
-                    className="text-gray-500 cursor-not-allowed transition-all duration-300 relative disabled:opacity-50 px-3 py-2 rounded-lg"
-                  >
-                    {t("navigation.services")}
-                  </button>
-                </Tooltip>
-
-                <Tooltip content={t("tooltips.aboutComingSoon")}>
-                  <button
-                    disabled
-                    className="text-gray-500 cursor-not-allowed transition-all duration-300 relative disabled:opacity-50 px-3 py-2 rounded-lg"
-                  >
-                    {t("navigation.about")}
-                  </button>
-                </Tooltip>
-              </nav>
-
-              <LanguageSwitcher />
-            </div>
+            <LanguageSwitcher />
           </div>
         </div>
       </div>

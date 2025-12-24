@@ -1,74 +1,72 @@
+"use client";
+
 import Tooltip from "@/components/Tooltip";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
 
 export function Footer() {
   const t = useTranslations();
+  const locale = useLocale();
+
+  // Helper function to get localized link
+  const getLocalizedPath = (path: string) => {
+    return `/${locale}${path}`;
+  };
+
   return (
-    <footer className="relative z-10 backdrop-blur-md bg-gray-100/60 border-t border-gray-200/50 mt-16">
+    <footer className="relative z-10 bg-[#0f0f0f] border-t border-[#2a2a2a] mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Main Footer Links */}
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h5 className="text-lg font-semibold mb-4 text-gray-800">
+            <h5 className="text-lg font-semibold mb-4 text-white">
               {t("footer.companyName")}
             </h5>
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p className="text-gray-400 text-sm leading-relaxed">
               {t("footer.companyDescription")}
             </p>
           </div>
           <div>
-            <h6 className="font-semibold mb-4 text-gray-800">
+            <h6 className="font-semibold mb-4 text-white">
               {t("footer.quickLinks")}
             </h6>
-            <ul className="space-y-2 text-sm text-gray-600">
+            <ul className="space-y-2 text-sm">
               <li>
-                <Tooltip
-                  content={t("tooltips.productsPageComingSoon")}
-                  disabled
+                <Link
+                  href={getLocalizedPath("/delivery")}
+                  className="text-gray-300 hover:text-[#fe9927] transition-colors"
                 >
-                  <button
-                    disabled
-                    className="text-gray-500 cursor-not-allowed disabled:opacity-70 hover:text-gray-600 transition-colors"
-                  >
-                    {t("footer.links.products")}
-                  </button>
-                </Tooltip>
+                  {t("navigation.delivery")}
+                </Link>
               </li>
               <li>
-                <Tooltip
-                  content={t("tooltips.servicesPageComingSoon")}
-                  disabled
+                <Link
+                  href={getLocalizedPath("/shop")}
+                  className="text-gray-300 hover:text-[#fe9927] transition-colors"
                 >
-                  <button
-                    disabled
-                    className="text-gray-500 cursor-not-allowed disabled:opacity-70 hover:text-gray-600 transition-colors"
-                  >
-                    {t("footer.links.services")}
-                  </button>
-                </Tooltip>
+                  {t("navigation.shop")}
+                </Link>
               </li>
               <li>
-                <Tooltip content={t("tooltips.aboutPageComingSoon")} disabled>
-                  <button
-                    disabled
-                    className="text-gray-500 cursor-not-allowed disabled:opacity-70 hover:text-gray-600 transition-colors"
-                  >
-                    {t("footer.links.aboutUs")}
-                  </button>
-                </Tooltip>
+                <Link
+                  href={getLocalizedPath("/products")}
+                  className="text-gray-300 hover:text-[#fe9927] transition-colors"
+                >
+                  {t("navigation.catalogs")}
+                </Link>
               </li>
               <li>
-                <a
-                  href="/contact"
-                  className="text-gray-700 hover:text-gray-900 transition-colors"
+                <Link
+                  href={getLocalizedPath("/contact")}
+                  className="text-gray-300 hover:text-[#fe9927] transition-colors"
                 >
                   {t("footer.links.contact")}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h6 className="font-semibold mb-4 text-gray-800">
+            <h6 className="font-semibold mb-4 text-white">
               {t("footer.contact")}
             </h6>
             <div className="space-y-3">
@@ -77,7 +75,7 @@ export function Footer() {
                 <div className="space-y-1">
                   <a
                     href="mailto:mtprime.fourniture@gmail.com"
-                    className="text-gray-700 hover:text-gray-900 text-sm transition-colors flex items-center gap-2"
+                    className="text-gray-300 hover:text-[#fe9927] text-sm transition-colors flex items-center gap-2"
                   >
                     <svg
                       className="w-4 h-4"
@@ -96,7 +94,7 @@ export function Footer() {
                   </a>
                   <a
                     href="mailto:mtprimelogistique@gmail.com"
-                    className="text-gray-700 hover:text-gray-900 text-sm transition-colors flex items-center gap-2"
+                    className="text-gray-300 hover:text-[#fe9927] text-sm transition-colors flex items-center gap-2"
                   >
                     <svg
                       className="w-4 h-4"
@@ -121,7 +119,7 @@ export function Footer() {
                 <div className="space-y-1">
                   <a
                     href="tel:+33744770802"
-                    className="text-gray-700 hover:text-gray-900 text-sm transition-colors flex items-center gap-2"
+                    className="text-gray-300 hover:text-[#fe9927] text-sm transition-colors flex items-center gap-2"
                   >
                     <svg
                       className="w-4 h-4"
@@ -140,7 +138,7 @@ export function Footer() {
                   </a>
                   <a
                     href="tel:+33766990205"
-                    className="text-gray-700 hover:text-gray-900 text-sm transition-colors flex items-center gap-2"
+                    className="text-gray-300 hover:text-[#fe9927] text-sm transition-colors flex items-center gap-2"
                   >
                     <svg
                       className="w-4 h-4"
@@ -162,15 +160,15 @@ export function Footer() {
             </div>
           </div>
           <div>
-            <h6 className="font-semibold mb-4 text-gray-800">
+            <h6 className="font-semibold mb-4 text-white">
               {t("footer.connect")}
             </h6>
-            <ul className="space-y-2 text-sm text-gray-600">
+            <ul className="space-y-2 text-sm">
               <li>
                 <Tooltip content={t("tooltips.facebookComingSoon")} disabled>
                   <button
                     disabled
-                    className="text-gray-700 hover:text-gray-900 cursor-not-allowed disabled:opacity-70 transition-colors flex items-center gap-2"
+                    className="text-gray-400 hover:text-[#fe9927] cursor-not-allowed disabled:opacity-70 transition-colors flex items-center gap-2"
                   >
                     <svg
                       className="w-4 h-4"
@@ -187,7 +185,7 @@ export function Footer() {
                 <Tooltip content={t("tooltips.twitterComingSoon")} disabled>
                   <button
                     disabled
-                    className="text-gray-700 hover:text-gray-900 cursor-not-allowed disabled:opacity-70 transition-colors flex items-center gap-2"
+                    className="text-gray-400 hover:text-[#fe9927] cursor-not-allowed disabled:opacity-70 transition-colors flex items-center gap-2"
                   >
                     <svg
                       className="w-4 h-4"
@@ -204,7 +202,7 @@ export function Footer() {
                 <Tooltip content={t("tooltips.instagramComingSoon")} disabled>
                   <button
                     disabled
-                    className="text-gray-700 hover:text-gray-900 cursor-not-allowed disabled:opacity-70 transition-colors flex items-center gap-2"
+                    className="text-gray-400 hover:text-[#fe9927] cursor-not-allowed disabled:opacity-70 transition-colors flex items-center gap-2"
                   >
                     <svg
                       className="w-4 h-4"
@@ -223,7 +221,7 @@ export function Footer() {
                 <Tooltip content={t("tooltips.linkedinComingSoon")} disabled>
                   <button
                     disabled
-                    className="text-gray-700 hover:text-gray-900 cursor-not-allowed disabled:opacity-70 transition-colors flex items-center gap-2"
+                    className="text-gray-400 hover:text-[#fe9927] cursor-not-allowed disabled:opacity-70 transition-colors flex items-center gap-2"
                   >
                     <svg
                       className="w-4 h-4"
@@ -241,11 +239,11 @@ export function Footer() {
         </div>
 
         {/* Company Details Section - Bottom Row */}
-        <div className="border-t border-gray-200/50 pt-6">
-          <div className="backdrop-blur-md bg-white/40 border border-gray-200/60 rounded-lg p-6">
+        <div className="border-t border-[#2a2a2a] pt-6">
+          <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg p-6">
             <div className="flex items-start gap-4 mb-6">
               <svg
-                className="w-5 h-5 text-gray-500 mt-0.5 flex-shrink-0"
+                className="w-5 h-5 text-[#fe9927] mt-0.5 flex-shrink-0"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -264,10 +262,10 @@ export function Footer() {
                 />
               </svg>
               <div>
-                <p className="text-sm font-medium text-gray-700 mb-1">
+                <p className="text-sm font-medium text-white mb-1">
                   {t("footer.companyAddress")}
                 </p>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-sm text-gray-400 leading-relaxed">
                   {t("footer.address")}
                 </p>
               </div>
@@ -275,9 +273,9 @@ export function Footer() {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <Tooltip content={t("tooltips.vatTooltip")} disabled>
-                <div className="flex items-center gap-3 p-3 rounded bg-white/50 hover:bg-white/70 transition-colors cursor-help">
+                <div className="flex items-center gap-3 p-3 rounded bg-[#252525] hover:bg-[#2a2a2a] transition-colors cursor-help border border-[#2a2a2a]">
                   <svg
-                    className="w-4 h-4 text-blue-500 flex-shrink-0"
+                    className="w-4 h-4 text-blue-400 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -290,10 +288,10 @@ export function Footer() {
                     />
                   </svg>
                   <div>
-                    <p className="text-xs font-medium text-gray-600 uppercase tracking-wide mb-1">
+                    <p className="text-xs font-medium text-gray-400 uppercase tracking-wide mb-1">
                       VAT
                     </p>
-                    <p className="text-xs text-gray-800 font-mono">
+                    <p className="text-xs text-white font-mono">
                       FR82 980 891 345
                     </p>
                   </div>
@@ -301,9 +299,9 @@ export function Footer() {
               </Tooltip>
 
               <Tooltip content={t("tooltips.sirenTooltip")} disabled>
-                <div className="flex items-center gap-3 p-3 rounded bg-white/50 hover:bg-white/70 transition-colors cursor-help">
+                <div className="flex items-center gap-3 p-3 rounded bg-[#252525] hover:bg-[#2a2a2a] transition-colors cursor-help border border-[#2a2a2a]">
                   <svg
-                    className="w-4 h-4 text-green-500 flex-shrink-0"
+                    className="w-4 h-4 text-green-400 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -316,20 +314,18 @@ export function Footer() {
                     />
                   </svg>
                   <div>
-                    <p className="text-xs font-medium text-gray-600 uppercase tracking-wide mb-1">
+                    <p className="text-xs font-medium text-gray-400 uppercase tracking-wide mb-1">
                       SIREN
                     </p>
-                    <p className="text-xs text-gray-800 font-mono">
-                      980 891 345
-                    </p>
+                    <p className="text-xs text-white font-mono">980 891 345</p>
                   </div>
                 </div>
               </Tooltip>
 
               <Tooltip content={t("tooltips.siretTooltip")} disabled>
-                <div className="flex items-center gap-3 p-3 rounded bg-white/50 hover:bg-white/70 transition-colors cursor-help">
+                <div className="flex items-center gap-3 p-3 rounded bg-[#252525] hover:bg-[#2a2a2a] transition-colors cursor-help border border-[#2a2a2a]">
                   <svg
-                    className="w-4 h-4 text-purple-500 flex-shrink-0"
+                    className="w-4 h-4 text-purple-400 flex-shrink-0"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -342,10 +338,10 @@ export function Footer() {
                     />
                   </svg>
                   <div>
-                    <p className="text-xs font-medium text-gray-600 uppercase tracking-wide mb-1">
+                    <p className="text-xs font-medium text-gray-400 uppercase tracking-wide mb-1">
                       SIRET
                     </p>
-                    <p className="text-xs text-gray-800 font-mono">
+                    <p className="text-xs text-white font-mono">
                       980 891 345 00012
                     </p>
                   </div>
@@ -355,7 +351,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-200/50 mt-8 pt-6 text-center text-sm text-gray-600">
+        <div className="border-t border-[#2a2a2a] mt-8 pt-6 text-center text-sm text-gray-400">
           <p>{t("footer.copyright")}</p>
         </div>
       </div>

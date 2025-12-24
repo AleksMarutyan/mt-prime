@@ -35,8 +35,15 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${fontSans.variable} ${fontMono.variable}`}>
-      <body>
+    <html
+      lang={locale}
+      className={`${fontSans.variable} ${fontMono.variable} bg-black`}
+      suppressHydrationWarning
+    >
+      <body
+        className={`${fontSans.className} bg-gradient-to-b from-black via-[#1a0a00] to-black text-white min-h-screen`}
+        suppressHydrationWarning
+      >
         <NextIntlClientProvider locale={locale} messages={messages}>
           <QueryProvider>
             <Providers>

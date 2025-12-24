@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --e-global-color-primary: #fe9927;
+  --e-global-color-secondary: #08090d;
+  --e-global-color-text: #ffffff;
+  --e-global-color-accent: #fe9927;
+  --e-global-color-color_1: #fe9927;
+  --e-global-color-color_2: #08090d;
+  --e-global-color-color_3: #101119;
+  --e-global-color-color_4: #1c1c1c;
+  --e-global-color-color_white: #ffffff;
+  --e-global-color-color_black: #000000;
+  --e-global-color-color_grey: #848484;
+  --e-global-color-color_error: #dd3333;
+  --e-global-color-color_success: #57c43c;
+  --e-global-color-color_alert: #ed7600;
+  --e-global-typography-text-font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: var(--e-global-color-secondary);
+  color: var(--e-global-color-text);
+  font-family: var(--e-global-typography-text-font-family);
+}
+
+@layer utilities {
+  .bg-primary {
+    background-color: var(--e-global-color-primary);
+  }
+  .bg-secondary {
+    background-color: var(--e-global-color-secondary);
+  }
+  .bg-dark {
+    background-color: var(--e-global-color-color_3);
+  }
+  .bg-darker {
+    background-color: var(--e-global-color-color_4);
+  }
+  .text-primary {
+    color: var(--e-global-color-primary);
+  }
+  .text-white {
+    color: var(--e-global-color-text);
+  }
+  .border-primary {
+    border-color: var(--e-global-color-primary);
+  }
+  .hover-primary:hover {
+    background-color: var(--e-global-color-primary);
+  }
+}

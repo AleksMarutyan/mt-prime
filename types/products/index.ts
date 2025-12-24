@@ -16,6 +16,7 @@ export type Product = {
   updatedAt: Date;
   createdAt: Date;
   category: string;
+  sku?: string;
   imagesUrls?: string[];
   descriptions: {
     [LocalesEnum.EN]: string;

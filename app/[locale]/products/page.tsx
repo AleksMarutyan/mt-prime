@@ -1,196 +1,128 @@
 "use client";
 
-import { Button } from "@/components/shadcn/button";
-import { useProductsInfiniteQuery } from "@/hooks/services/products";
-import {
-  AlertCircle,
-  RotateCcw,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
-import { ProductCard, ProductSkeleton } from "@/components/custom/ProductCard";
 import { useTranslations } from "next-intl";
-import { Product } from "@/types/products";
-import { useState } from "react";
-import { ProductModal } from "@/components/custom/ProductModal";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationLink,
-} from "@/components/shadcn/pagination";
-import {
-  Select,
-  SelectTrigger,
-  SelectValue,
-  SelectContent,
-  SelectItem,
-} from "@/components/shadcn/select";
+import QRCodeSection from "@/components/QRCodeSection";
+import Link from "next/link";
 
-export default function ProductsPage() {
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [pageSize, setPageSize] = useState(10);
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const { data, error, refetch, isLoading, isError } = useProductsInfiniteQuery(
-    { pageSize, page: currentPage }
-  );
-
-  const products = data?.pages ? data.pages.flatMap((page) => page.data) : [];
-  const total = data?.pages?.[0]?.total ?? 0;
+export default function CatalogsPage() {
   const t = useTranslations();
 
-  const totalPages = Math.ceil(total / pageSize);
-
-  // Pagination handler
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    refetch();
-  };
-
-  // Page size handler
-  const handlePageSizeChange = (size: number) => {
-    setPageSize(size);
-    setCurrentPage(1);
-    refetch();
-  };
-
-  if (!isLoading && isError) {
-    return (
-      <div className="flex flex-col items-center justify-center min-h-[300px]">
-        <div className="rounded-xl border border-gray-200 bg-white shadow-sm p-8 max-w-md w-full flex flex-col items-center">
-          <AlertCircle className="h-10 w-10 text-red-400 mb-3" />
-          <span className="text-lg font-semibold text-gray-700 mb-2">
-            {error instanceof Error ? error.message : "Failed to load products"}
-          </span>
-          <span className="text-sm text-gray-500 mb-4 text-center">
-            Please check your connection or try again.
-          </span>
-          <Button
-            variant="outline"
-            onClick={() => refetch()}
-            className="text-blue-600 items-center gap-2 hover:bg-blue-50 hover:text-blue-800 transition-colors"
-          >
-            <RotateCcw className="h-5 w-5" />
-            Refetch
-          </Button>
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <>
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 mb-4">
-          {t("products.title")}
-        </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          {t("products.subtitle")}
-        </p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            onClick={() => setSelectedProduct(product)}
-          />
-        ))}
-        {isLoading &&
-          Array.from({ length: 8 }).map((_, i) => <ProductSkeleton key={i} />)}
-      </div>
-
-      {/* Pagination Controls */}
-      <div className="relative flex flex-col md:flex-row items-center gap-4 mt-24 mb-8 px-2">
-        {/* Centered Pagination using shadcn components */}
-        <div className="absolute left-1/2 transform -translate-x-1/2">
-          <Pagination>
-            <PaginationContent className="flex items-center gap-2 bg-white rounded-lg shadow border border-gray-100 px-6 py-2">
-              {/* Prev Button */}
-              <PaginationItem>
-                <Button
-                  variant="outline"
-                  className="rounded-full w-[40px] h-[40px] flex-0 px-4 py-1 mr-4 text-gray-700 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
-                  onClick={() => handlePageChange(currentPage - 1)}
-                  disabled={currentPage === 1}
-                >
-                  <ChevronLeft />
-                </Button>
-              </PaginationItem>
-              {/* Page Numbers */}
-              {totalPages > 1 ? (
-                Array.from({ length: totalPages }).map((_, idx) => (
-                  <PaginationItem key={idx + 1}>
-                    <PaginationLink
-                      className={`rounded-full w-[40px] h-[40px] flex-0 px-4 py-1 font-medium transition-colors ${
-                        currentPage === idx + 1
-                          ? "bg-blue-100 text-blue-600 border border-blue-600 shadow-sm"
-                          : "text-gray-700 hover:bg-blue-100 hover:text-blue-700"
-                      }`}
-                      onClick={() => handlePageChange(idx + 1)}
-                      isActive={currentPage === idx + 1}
-                    >
-                      {idx + 1}
-                    </PaginationLink>
-                  </PaginationItem>
-                ))
-              ) : (
-                <PaginationItem>
-                  <PaginationLink
-                    className="rounded-full min-w-[40px] px-4 py-1 bg-blue-100 text-blue-600 font-bold border border-blue-600 shadow-sm"
-                    isActive={true}
-                  >
-                    1
-                  </PaginationLink>
-                </PaginationItem>
-              )}
-              {/* Next Button */}
-              <PaginationItem>
-                <Button
-                  variant="outline"
-                  className="rounded-full w-[40px] h-[40px] flex-0 px-4 py-1 ml-4 text-gray-700 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
-                  onClick={() => handlePageChange(currentPage + 1)}
-                  disabled={currentPage === totalPages || totalPages === 1}
-                >
-                  <ChevronRight />
-                </Button>
-              </PaginationItem>
-            </PaginationContent>
-          </Pagination>
+    <div className="min-h-screen bg-[#0f0f0f]">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden bg-gradient-to-br from-[#1a1a1a] via-[#252525] to-[#2a2a2a] py-16">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#fe9927] rounded-full opacity-10 blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#fe9927] rounded-full opacity-5 blur-3xl"></div>
         </div>
-        {/* Page Size Selector on Right */}
-        <div className="md:ml-auto flex items-center gap-2 bg-white rounded-lg shadow border border-gray-100 px-4 py-2">
-          <span className="text-sm text-gray-700 font-medium">Page size:</span>
-          <Select
-            value={pageSize.toString()}
-            onValueChange={(val) => handlePageSizeChange(Number(val))}
-          >
-            <SelectTrigger className="w-[80px] bg-gray-50 border border-gray-200 rounded px-2 py-1 text-gray-700 font-medium">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent className="bg-white border border-gray-100 rounded shadow">
-              {[10, 20, 30].map((size) => (
-                <SelectItem
-                  key={size}
-                  value={size.toString()}
-                  className="text-gray-700 font-medium focus:bg-blue-50 focus:text-blue-600 data-[state=checked]:bg-blue-100 data-[state=checked]:text-blue-700"
-                >
-                  {size}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+            {t("qrSection.title")}
+          </h1>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            {t("qrSection.subtitle")}
+          </p>
         </div>
       </div>
 
-      {selectedProduct && (
-        <ProductModal
-          product={selectedProduct}
-          isOpen={selectedProduct !== null}
-          onClose={() => setSelectedProduct(null)}
-        />
-      )}
-    </>
+      {/* QR Code Section */}
+      <div className="py-16">
+        <QRCodeSection />
+      </div>
+
+      {/* Features Section */}
+      <div className="bg-[#151515] py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-br from-[#fe9927] to-[#ff8800] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[#fe9927]/30 group-hover:shadow-[#fe9927]/50 transition-all transform group-hover:scale-110">
+                <svg
+                  className="w-10 h-10 text-black"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                {t("features.fastDelivery.title")}
+              </h3>
+              <p className="text-gray-400">
+                {t("features.fastDelivery.description")}
+              </p>
+            </div>
+
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-br from-[#fe9927] to-[#ff8800] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[#fe9927]/30 group-hover:shadow-[#fe9927]/50 transition-all transform group-hover:scale-110">
+                <svg
+                  className="w-10 h-10 text-black"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                {t("features.qualityProducts.title")}
+              </h3>
+              <p className="text-gray-400">
+                {t("features.qualityProducts.description")}
+              </p>
+            </div>
+
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-br from-[#fe9927] to-[#ff8800] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[#fe9927]/30 group-hover:shadow-[#fe9927]/50 transition-all transform group-hover:scale-110">
+                <svg
+                  className="w-10 h-10 text-black"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 1 0 0 19.5 9.75 9.75 0 0 0 0-19.5Z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                {t("features.support.title")}
+              </h3>
+              <p className="text-gray-400">
+                {t("features.support.description")}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-[#fe9927] to-[#ff8800] py-16">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl lg:text-4xl font-bold text-black mb-4">
+            {t("cta.title")}
+          </h2>
+          <p className="text-xl text-black/80 mb-8">{t("cta.subtitle")}</p>
+          <Link href="/contact">
+            <button className="bg-black text-white hover:bg-[#1c1c1c] font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
+              {t("cta.button")}
+            </button>
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }

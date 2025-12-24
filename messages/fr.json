@@ -1,9 +1,9 @@
 {
   "navigation": {
     "home": "Accueil",
-    "products": "Produits",
-    "services": "Services",
-    "about": "À propos",
+    "delivery": "Services",
+    "shop": "Boutique",
+    "catalogs": "Catalogues",
     "contact": "Contact"
   },
   "hero": {
@@ -23,6 +23,26 @@
     "step3": "• Appuyez sur la notification qui apparaît",
     "step4": "• Ou utilisez une application de scanner QR",
     "openDocument": "Ouvrir le document"
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Solutions complètes de logistique et de transport pour les besoins de votre entreprise",
+    "roadTransport": {
+      "title": "Transport Routier Public de Marchandises",
+      "description": "Services de transport professionnels pour tous types de fret"
+    },
+    "importExport": {
+      "title": "Import-Export",
+      "description": "Services de commerce international et de dédouanement"
+    },
+    "logistics": {
+      "title": "Logistique et Supervision des Transports",
+      "description": "Gestion et coordination complète de la chaîne d'approvisionnement"
+    },
+    "vehicleSales": {
+      "title": "Achat et Vente de Véhicules",
+      "description": "Commerce de véhicules commerciaux et équipements de transport"
+    }
   },
   "features": {
     "fastDelivery": {
@@ -74,6 +94,7 @@
   "contact": {
     "title": "Nous contacter",
     "companyInfo": "Informations sur l'entreprise",
+    "companyAddress": "Adresse :",
     "legalInfo": "Informations légales",
     "getInTouch": "Prendre contact",
     "formComingSoon": "Formulaire de contact bientôt disponible",
@@ -118,5 +139,147 @@
     "additionalInfo": "Informations Complémentaires",
     "category": "Catégorie",
     "sku": "Référence"
+  },
+  "delivery": {
+    "hero": {
+      "title": "Livraison Rapide et Fiable",
+      "subtitle": "Votre partenaire de confiance pour les services de livraison express en France. Nous livrons vos colis rapidement, en toute sécurité et à temps.",
+      "getQuote": "Obtenir un Devis",
+      "trackPackage": "Suivre un Colis"
+    },
+    "services": {
+      "title": "Nos Services de Livraison",
+      "subtitle": "Choisissez parmi notre gamme d'options de livraison conçues pour répondre à vos besoins spécifiques",
+      "express": {
+        "title": "Livraison Express",
+        "description": "Livraison le jour même et le lendemain pour les colis urgents dans les grandes villes.",
+        "features": {
+          "sameDay": "Livraison le jour même disponible",
+          "tracking": "Suivi en temps réel",
+          "guaranteed": "Délais de livraison garantis",
+          "signature": "Confirmation de signature"
+        }
+      },
+      "standard": {
+        "title": "Livraison Standard",
+        "description": "Service de livraison fiable pour tous vos besoins d'expédition réguliers.",
+        "features": {
+          "duration": "2-5 jours ouvrés",
+          "coverage": "Couverture nationale",
+          "insurance": "Assurance colis incluse",
+          "pricing": "Prix compétitifs"
+        }
+      },
+      "freight": {
+        "title": "Transport de Fret",
+        "description": "Solutions de livraison de fret lourd et en vrac pour les entreprises.",
+        "features": {
+          "heavyCargo": "Manutention de fret lourd",
+          "equipment": "Équipement spécialisé",
+          "scheduled": "Livraisons programmées",
+          "custom": "Solutions personnalisées"
+        }
+      },
+      "learnMore": "En Savoir Plus"
+    },
+    "features": {
+      "title": "Pourquoi Choisir MT Prime Livraison ?",
+      "subtitle": "Nous nous engageons à fournir la meilleure expérience de livraison",
+      "onTime": {
+        "title": "Livraison Ponctuelle",
+        "description": "98% de taux de livraison à temps avec suivi en temps réel"
+      },
+      "secure": {
+        "title": "Manipulation Sécurisée",
+        "description": "Vos colis sont en sécurité avec nos professionnels de livraison certifiés"
+      },
+      "coverage": {
+        "title": "Large Couverture",
+        "description": "Réseau de livraison national couvrant toutes les grandes villes"
+      },
+      "support": {
+        "title": "Support 24/7",
+        "description": "Support client 24h/24 pour tous vos besoins"
+      }
+    },
+    "cta": {
+      "title": "Prêt à Expédier avec Nous ?",
+      "subtitle": "Commencez avec MT Prime Livraison aujourd'hui et découvrez la différence",
+      "getQuote": "Devis Gratuit",
+      "visitShop": "Visitez Notre Boutique"
+    }
+  },
+  "homepage": {
+    "hero": {
+      "title": "MT PRIME LOGISTIQUE",
+      "tagline": "Transport • Import-Export • Logistique • Véhicules",
+      "subtitle": "Votre partenaire de confiance pour tous vos besoins en logistique et transport en France",
+      "getQuote": "Demander un Devis",
+      "viewCatalogs": "Nos Catalogues"
+    },
+    "services": {
+      "title": "Nos Services",
+      "subtitle": "Solutions complètes en logistique et transport depuis 2023",
+      "roadTransport": {
+        "title": "Transport Routier",
+        "description": "Transport public de marchandises tous tonnages",
+        "feature1": "Tous types de véhicules",
+        "feature2": "Transport national",
+        "feature3": "Suivi en temps réel",
+        "feature4": "Autorisations DREAL"
+      },
+      "importExport": {
+        "title": "Import-Export",
+        "description": "Commerce international et dédouanement",
+        "feature1": "Formalités douanières",
+        "feature2": "Documentation export",
+        "feature3": "Conformité réglementaire",
+        "feature4": "Conseil en commerce"
+      },
+      "logistics": {
+        "title": "Logistique & Supervision",
+        "description": "Gestion complète de la chaîne logistique",
+        "feature1": "Planification transport",
+        "feature2": "Optimisation des flux",
+        "feature3": "Coordination multi-sites",
+        "feature4": "Suivi des opérations"
+      },
+      "vehicles": {
+        "title": "Achat Vente Véhicules",
+        "description": "Véhicules commerciaux et équipements",
+        "feature1": "Véhicules utilitaires",
+        "feature2": "Poids lourds",
+        "feature3": "Conseil achat/vente",
+        "feature4": "Garantie qualité"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Pourquoi Choisir MT PRIME LOGISTIQUE ?",
+      "authorized": {
+        "title": "Autorisé & Certifié",
+        "description": "Autorisations DREAL en règle • Immatriculé RCS Cannes • Assurances complètes"
+      },
+      "reliable": {
+        "title": "Réactivité & Fiabilité",
+        "description": "Service rapide • Respect des délais • Suivi transparent de vos opérations"
+      },
+      "experienced": {
+        "title": "Équipe Expérimentée",
+        "description": "Professionnels qualifiés • Expertise logistique • Service personnalisé"
+      }
+    },
+    "cta": {
+      "title": "Prêt à Travailler Ensemble ?",
+      "subtitle": "Contactez-nous pour discuter de vos besoins en logistique et transport",
+      "getQuote": "Demander un Devis Gratuit",
+      "viewCatalogs": "Voir Nos Catalogues"
+    },
+    "companyInfo": {
+      "legalName": "MT PRIME LOGISTIQUE",
+      "legalForm": "SARL au capital de 9 000€",
+      "address": "143 Avenue Francis Tonner, 06150 Cannes La Bocca, France",
+      "registration": "RCS Cannes 980 891 345 • SIRET 980 891 345 00012 • TVA FR82 980 891 345",
+      "authorization": "Autorisation DREAL • Activité depuis octobre 2023"
+    }
   }
 }

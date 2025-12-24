@@ -1,10 +1,10 @@
 {
   "navigation": {
     "home": "Home",
-    "products": "Products",
-    "contact": "Contact",
-    "services": "Services",
-    "about": "About"
+    "delivery": "Services",
+    "shop": "Shop",
+    "catalogs": "Catalogs",
+    "contact": "Contact"
   },
   "hero": {
     "title": "Welcome to Our Store",
@@ -23,6 +23,26 @@
     "step3": "• Tap the notification that appears",
     "step4": "• Or use a QR scanner app",
     "openDocument": "Open Document"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive logistics and transport solutions for your business needs",
+    "roadTransport": {
+      "title": "Public Road Transport of Goods",
+      "description": "Professional transport services for all types of cargo"
+    },
+    "importExport": {
+      "title": "Import-Export",
+      "description": "International trade and customs clearance services"
+    },
+    "logistics": {
+      "title": "Logistics & Transport Supervision",
+      "description": "Complete supply chain management and coordination"
+    },
+    "vehicleSales": {
+      "title": "Purchase & Sale of Vehicles",
+      "description": "Commercial vehicles and transport equipment trading"
+    }
   },
   "features": {
     "fastDelivery": {
@@ -74,6 +94,7 @@
   "contact": {
     "title": "Contact Us",
     "companyInfo": "Company Information",
+    "companyAddress": "Address:",
     "legalInfo": "Legal Information",
     "getInTouch": "Get in Touch",
     "formComingSoon": "Contact Form Coming Soon",
@@ -118,5 +139,147 @@
     "additionalInfo": "Additional Information",
     "category": "Category",
     "sku": "SKU"
+  },
+  "delivery": {
+    "hero": {
+      "title": "Fast & Reliable Delivery",
+      "subtitle": "Your trusted partner for express delivery services across France. We deliver your packages quickly, safely, and on time.",
+      "getQuote": "Get Quote Now",
+      "trackPackage": "Track Package"
+    },
+    "services": {
+      "title": "Our Delivery Services",
+      "subtitle": "Choose from our range of delivery options designed to meet your specific needs",
+      "express": {
+        "title": "Express Delivery",
+        "description": "Same-day and next-day delivery for urgent packages across major cities.",
+        "features": {
+          "sameDay": "Same-day delivery available",
+          "tracking": "Real-time tracking",
+          "guaranteed": "Guaranteed delivery times",
+          "signature": "Signature confirmation"
+        }
+      },
+      "standard": {
+        "title": "Standard Delivery",
+        "description": "Reliable delivery service for all your regular shipping needs.",
+        "features": {
+          "duration": "2-5 business days",
+          "coverage": "Nationwide coverage",
+          "insurance": "Package insurance included",
+          "pricing": "Competitive pricing"
+        }
+      },
+      "freight": {
+        "title": "Freight Delivery",
+        "description": "Heavy cargo and bulk delivery solutions for businesses and enterprises.",
+        "features": {
+          "heavyCargo": "Heavy cargo handling",
+          "equipment": "Specialized equipment",
+          "scheduled": "Scheduled deliveries",
+          "custom": "Custom solutions"
+        }
+      },
+      "learnMore": "Learn More"
+    },
+    "features": {
+      "title": "Why Choose MT Prime Delivery?",
+      "subtitle": "We're committed to providing the best delivery experience",
+      "onTime": {
+        "title": "On-Time Delivery",
+        "description": "98% on-time delivery rate with real-time tracking"
+      },
+      "secure": {
+        "title": "Secure Handling",
+        "description": "Your packages are safe with our certified delivery professionals"
+      },
+      "coverage": {
+        "title": "Wide Coverage",
+        "description": "Nationwide delivery network covering all major cities"
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Round-the-clock customer support for all your needs"
+      }
+    },
+    "cta": {
+      "title": "Ready to Ship with Us?",
+      "subtitle": "Get started with MT Prime Delivery today and experience the difference",
+      "getQuote": "Get Free Quote",
+      "visitShop": "Visit Our Shop"
+    }
+  },
+  "homepage": {
+    "hero": {
+      "title": "MT PRIME LOGISTIQUE",
+      "tagline": "Transport • Import-Export • Logistics • Vehicles",
+      "subtitle": "Your trusted partner for all your logistics and transport needs in France",
+      "getQuote": "Request a Quote",
+      "viewCatalogs": "Our Catalogs"
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Complete logistics and transport solutions since 2023",
+      "roadTransport": {
+        "title": "Road Transport",
+        "description": "Public transport of goods - all tonnages",
+        "feature1": "All types of vehicles",
+        "feature2": "National transport",
+        "feature3": "Real-time tracking",
+        "feature4": "DREAL authorizations"
+      },
+      "importExport": {
+        "title": "Import-Export",
+        "description": "International trade and customs clearance",
+        "feature1": "Customs formalities",
+        "feature2": "Export documentation",
+        "feature3": "Regulatory compliance",
+        "feature4": "Trade consulting"
+      },
+      "logistics": {
+        "title": "Logistics & Supervision",
+        "description": "Complete logistics chain management",
+        "feature1": "Transport planning",
+        "feature2": "Flow optimization",
+        "feature3": "Multi-site coordination",
+        "feature4": "Operations tracking"
+      },
+      "vehicles": {
+        "title": "Vehicle Sales",
+        "description": "Commercial vehicles and equipment",
+        "feature1": "Utility vehicles",
+        "feature2": "Heavy goods vehicles",
+        "feature3": "Purchase/sale advice",
+        "feature4": "Quality guarantee"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Why Choose MT PRIME LOGISTIQUE?",
+      "authorized": {
+        "title": "Authorized & Certified",
+        "description": "DREAL authorizations in order • Registered RCS Cannes • Complete insurance"
+      },
+      "reliable": {
+        "title": "Responsiveness & Reliability",
+        "description": "Fast service • Respect deadlines • Transparent tracking of your operations"
+      },
+      "experienced": {
+        "title": "Experienced Team",
+        "description": "Qualified professionals • Logistics expertise • Personalized service"
+      }
+    },
+    "cta": {
+      "title": "Ready to Work Together?",
+      "subtitle": "Contact us to discuss your logistics and transport needs",
+      "getQuote": "Request Free Quote",
+      "viewCatalogs": "View Our Catalogs"
+    },
+    "companyInfo": {
+      "legalName": "MT PRIME LOGISTIQUE",
+      "legalForm": "SARL with capital of €9,000",
+      "address": "143 Avenue Francis Tonner, 06150 Cannes La Bocca, France",
+      "registration": "RCS Cannes 980 891 345 • SIRET 980 891 345 00012 • VAT FR82 980 891 345",
+      "authorization": "DREAL Authorization • Active since October 2023"
+    }
   }
 }
