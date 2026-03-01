@@ -1,0 +1,14 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /*/admin
+Disallow: /admin
+
+# Disallow PDF generation routes (use links instead)
+Disallow: /pdf/
+
+# Sitemap location
+Sitemap: https://mtprime.fr/sitemap.xml

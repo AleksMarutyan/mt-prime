@@ -27,13 +27,13 @@ export default async function HomePage() {
               {t("hero.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
-                <button className="bg-[#fe9927] text-black px-8 py-3 rounded-lg font-semibold hover:bg-[#ff8800] transition-all duration-300 shadow-lg shadow-[#fe9927]/30 hover:shadow-[#fe9927]/50 transform hover:scale-105">
+              <Link href="/contact" className="w-full sm:w-auto">
+                <button className="w-full bg-[#fe9927] text-black px-8 py-3 rounded-lg font-semibold hover:bg-[#ff8800] transition-all duration-300 shadow-lg shadow-[#fe9927]/30 hover:shadow-[#fe9927]/50 transform hover:scale-105">
                   {t("hero.getQuote")}
                 </button>
               </Link>
-              <Link href="/products">
-                <button className="border-2 border-[#fe9927] text-[#fe9927] px-8 py-3 rounded-lg font-semibold hover:bg-[#fe9927] hover:text-black transition-all duration-300 transform hover:scale-105">
+              <Link href="/products" className="w-full sm:w-auto">
+                <button className="w-full border-2 border-[#fe9927] text-[#fe9927] px-8 py-3 rounded-lg font-semibold hover:bg-[#fe9927] hover:text-black transition-all duration-300 transform hover:scale-105">
                   {t("hero.viewCatalogs")}
                 </button>
               </Link>
@@ -325,13 +325,13 @@ export default async function HomePage() {
           </h2>
           <p className="text-xl text-black/80 mb-8">{t("cta.subtitle")}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <button className="bg-black text-white hover:bg-[#1c1c1c] font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
+            <Link href="/contact" className="w-full sm:w-auto">
+              <button className="w-full bg-black text-white hover:bg-[#1c1c1c] font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl">
                 {t("cta.getQuote")}
               </button>
             </Link>
-            <Link href="/products">
-              <button className="border-2 border-black text-black hover:bg-black hover:text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <Link href="/products" className="w-full sm:w-auto">
+              <button className="w-full border-2 border-black text-black hover:bg-black hover:text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105">
                 {t("cta.viewCatalogs")}
               </button>
             </Link>

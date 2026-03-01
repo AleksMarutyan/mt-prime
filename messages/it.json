@@ -1,4 +1,8 @@
 {
+  "metadata": {
+    "title": "MT PRIME Logistique - Servizi di Trasporto e Logistica in Francia",
+    "description": "Servizi professionali di trasporto e logistica a Cannes, Francia. Trasporto stradale, import-export, supervisione logistica e vendita veicoli. Autorizzato DREAL dal 2023."
+  },
   "navigation": {
     "home": "Home",
     "delivery": "Servizi",
@@ -95,10 +99,19 @@
     "title": "Contattaci",
     "companyInfo": "Informazioni aziendali",
     "companyAddress": "Indirizzo:",
+    "emailShop": "Email - Negozio",
+    "emailLogistics": "Email - Logistica",
+    "phone1": "Telefono 1",
+    "phone2": "Telefono 2",
+    "businessHours": "Orari di apertura",
+    "businessHoursSchedule": "Lunedì - Venerdì: 9:00 - 18:00",
+    "saturdaySchedule": "Sabato: 9:00 - 12:00",
     "legalInfo": "Informazioni legali",
     "getInTouch": "Mettiti in contatto",
     "formComingSoon": "Modulo di contatto in arrivo",
-    "formDescription": "Stiamo lavorando su un modulo di contatto. Per ora, utilizza le informazioni a sinistra per raggiungerci."
+    "formDescription": "Stiamo lavorando su un modulo di contatto. Per ora, utilizza le informazioni a sinistra per raggiungerci.",
+    "emailShopButton": "Email Negozio",
+    "emailLogisticsButton": "Email Logistica"
   },
   "tooltips": {
     "productsComingSoon": "🚧 Prossimamente - Funzionalità in sviluppo",

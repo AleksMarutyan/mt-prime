@@ -1,4 +1,8 @@
 {
+  "metadata": {
+    "title": "MT PRIME Logistique - Services de Transport et Logistique en France",
+    "description": "Services professionnels de transport et logistique à Cannes, France. Transport routier, import-export, supervision logistique et vente de véhicules. Autorisé DREAL depuis 2023."
+  },
   "navigation": {
     "home": "Accueil",
     "delivery": "Services",
@@ -95,10 +99,19 @@
     "title": "Nous contacter",
     "companyInfo": "Informations sur l'entreprise",
     "companyAddress": "Adresse :",
+    "emailShop": "Email - Boutique",
+    "emailLogistics": "Email - Logistique",
+    "phone1": "Téléphone 1",
+    "phone2": "Téléphone 2",
+    "businessHours": "Horaires d'ouverture",
+    "businessHoursSchedule": "Lundi - Vendredi : 9h00 - 18h00",
+    "saturdaySchedule": "Samedi : 9h00 - 12h00",
     "legalInfo": "Informations légales",
     "getInTouch": "Prendre contact",
     "formComingSoon": "Formulaire de contact bientôt disponible",
-    "formDescription": "Nous travaillons sur un formulaire de contact. Pour l'instant, veuillez utiliser les informations à gauche pour nous joindre."
+    "formDescription": "Nous travaillons sur un formulaire de contact. Pour l'instant, veuillez utiliser les informations à gauche pour nous joindre.",
+    "emailShopButton": "Email Boutique",
+    "emailLogisticsButton": "Email Logistique"
   },
   "tooltips": {
     "productsComingSoon": "🚧 Bientôt disponible - Fonctionnalité en développement",

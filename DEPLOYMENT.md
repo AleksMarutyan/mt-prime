@@ -181,3 +181,178 @@ Built with ❤️ for MT PRIME by GitHub Copilot
 ## License
 
 Private - All rights reserved to MT PRIME
+
+# MT PRIME Logistique - Deployment Guide 🚀
+
+## Production Domain: mtprime.fr
+
+### 🌐 Vercel Deployment Steps
+
+#### 1. **Deploy to Vercel**
+
+```bash
+# Install Vercel CLI (if not already installed)
+npm i -g vercel
+
+# Login to Vercel
+vercel login
+
+# Deploy to production
+vercel --prod
+```
+
+#### 2. **Configure Custom Domain (mtprime.fr)**
+
+In your Vercel dashboard:
+
+1. Go to your project settings
+2. Navigate to **Domains**
+3. Add `mtprime.fr` and `www.mtprime.fr`
+4. Vercel will provide DNS records
+
+#### 3. **DNS Configuration (OVHcloud)**
+
+Based on your screenshot, add these DNS records in OVHcloud manager:
+
+```
+Type    Name              Value                           TTL
+A       mtprime.fr        76.76.21.21 (Vercel IP)        Auto
+CNAME   www               cname.vercel-dns.com.           Auto
+```
+
+**Get Vercel's IP from your dashboard** - It will show after adding the domain.
+
+#### 4. **Environment Variables on Vercel**
+
+Set these in your Vercel project settings → Environment Variables:
+
+```
+NEXT_PUBLIC_APP_URL=https://mtprime.fr
+DATABASE_URL=<your-production-database-url>
+```
+
+#### 5. **Verify Domain**
+
+After DNS propagation (can take up to 48 hours):
+
+- Visit https://mtprime.fr
+- Check all locales: /en, /fr, /it
+
+### 📋 Pre-Deployment Checklist
+
+- ✅ All URLs updated to mtprime.fr
+- ✅ Sitemap configured
+- ✅ robots.txt configured
+- ✅ SEO metadata optimized
+- ✅ DNS records ready
+- ✅ Environment variables set
+
+### 🔒 SSL Certificate
+
+Vercel automatically provisions SSL certificates for custom domains. It may take a few minutes after adding the domain.
+
+### 🧪 Testing
+
+After deployment:
+
+1. Test all language versions
+2. Verify QR codes work
+3. Check PDF viewer functionality
+4. Test mobile responsiveness
+5. Verify SEO with Google Search Console
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS with shadcn/ui
+- **Database**: Prisma
+- **Internationalization**: next-intl
+- **Package Manager**: pnpm
+
+## 📦 Project Structure
+
+```
+mt-prime/
+├── app/
+│   ├── [locale]/           # Internationalized routes
+│   ├── api/                # API routes
+│   ├── layout.tsx          # Root layout
+│   └── sitemap.ts          # SEO sitemap
+├── components/             # React components
+├── lib/                    # Utilities
+├── messages/               # Translations (en, fr, it)
+├── prisma/                 # Database schema
+└── public/                 # Static assets
+```
+
+## 🚀 Local Development
+
+```bash
+# Install dependencies
+pnpm install
+
+# Run development server
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Start production server
+pnpm start
+```
+
+### Development URLs
+
+- Main: http://localhost:3000
+- English: http://localhost:3000/en
+- French: http://localhost:3000/fr
+- Italian: http://localhost:3000/it
+
+## 📱 Mobile Testing
+
+For QR code testing on mobile devices:
+
+1. Get your local IP address
+2. Update `.env.local`:
+   ```
+   NEXT_PUBLIC_APP_URL=http://YOUR_IP:3000
+   ```
+3. Ensure mobile device is on same network
+
+## 🔧 Configuration Files
+
+- `vercel.json` - Vercel deployment config
+- `.env.local` - Local environment variables
+- `.env.example` - Template for environment variables
+- `next.config.mjs` - Next.js configuration
+
+## 📊 SEO Features
+
+- ✅ Dynamic sitemap with all locales
+- ✅ robots.txt for crawler instructions
+- ✅ OpenGraph and Twitter cards
+- ✅ JSON-LD structured data
+- ✅ Hreflang tags for multilingual SEO
+- ✅ Canonical URLs
+- ✅ Meta descriptions and titles
+
+## 🌍 Supported Languages
+
+- 🇬🇧 English (en) - Default
+- 🇫🇷 French (fr)
+- 🇮🇹 Italian (it)
+
+## 📞 Support
+
+Built for MT PRIME Logistique
+Professional Transport & Logistics Services in Cannes, France
+Contact: +33 7 44 77 08 02
+
+---
+
+## License
+
+Private - All rights reserved to MT PRIME Logistique
