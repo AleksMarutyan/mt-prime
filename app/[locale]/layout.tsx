@@ -5,6 +5,11 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Providers } from "@/components/providers";
 import { QueryProvider } from "@/providers/query-provider";
+import {
+  GoogleAnalytics,
+  GoogleTagManager,
+  GoogleTagManagerNoScript,
+} from "@/components/analytics";
 import "../global.css";
 import { ConditionalLayout } from "@/components/layout/Layout/Layout";
 
@@ -76,6 +81,9 @@ export default async function LocaleLayout({
         className={`${fontSans.className} bg-gradient-to-b from-black via-[#1a0a00] to-black text-white min-h-screen`}
         suppressHydrationWarning
       >
+        <GoogleTagManagerNoScript />
+        <GoogleTagManager />
+        <GoogleAnalytics />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <QueryProvider>
             <Providers>

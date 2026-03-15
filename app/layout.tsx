@@ -79,10 +79,7 @@ export const metadata: Metadata = {
     apple: "/favicon.svg",
   },
   verification: {
-    // Add your verification codes here when you get them
-    // google: "your-google-verification-code",
-    // yandex: "your-yandex-verification-code",
-    // bing: "your-bing-verification-code",
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
 };
 
