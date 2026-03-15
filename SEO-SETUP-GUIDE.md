@@ -7,6 +7,7 @@ This guide will help you set up Google Analytics, Google Tag Manager, and Google
 ## ✅ What's Already Done
 
 Your website now has:
+
 - ✅ Google Analytics 4 (GA4) tracking code
 - ✅ Google Tag Manager (GTM) integration
 - ✅ Google Search Console verification ready
@@ -26,6 +27,7 @@ Your website now has:
 **Why?** Track user behavior, page views, conversions, and website traffic.
 
 **Steps:**
+
 1. Go to [Google Analytics](https://analytics.google.com/)
 2. Sign in with your Google account
 3. Click **"Admin"** (bottom left)
@@ -41,6 +43,7 @@ Your website now has:
 10. **Copy the Measurement ID** (format: `G-XXXXXXXXXX`)
 
 **Add to your project:**
+
 ```bash
 # Create a .env.local file (or add to existing one)
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
@@ -53,6 +56,7 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 **Why?** Manage all tracking codes from one place without code changes.
 
 **Steps:**
+
 1. Go to [Google Tag Manager](https://tagmanager.google.com/)
 2. Sign in with your Google account
 3. Click **"Create Account"**
@@ -67,12 +71,14 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 8. **Copy the Container ID** (format: `GTM-XXXXXXX`)
 
 **Add to your project:**
+
 ```bash
 # Add to .env.local
 NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX
 ```
 
 **Optional: Link GA4 to GTM**
+
 1. In GTM, click **"Tags"** → **"New"**
 2. Name: `GA4 Configuration`
 3. Tag type: **Google Analytics: GA4 Configuration**
@@ -88,6 +94,7 @@ NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX
 **Why?** Monitor your website's search performance, indexing status, and fix SEO issues.
 
 **Steps:**
+
 1. Go to [Google Search Console](https://search.google.com/search-console)
 2. Sign in with your Google account
 3. Click **"Add Property"**
@@ -100,6 +107,7 @@ NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX
 7. Copy only the `YOUR-CODE-HERE` part
 
 **Add to your project:**
+
 ```bash
 # Add to .env.local
 NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=YOUR-CODE-HERE
@@ -128,7 +136,8 @@ NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX
 NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=your-verification-code-here
 ```
 
-**Important:** 
+**Important:**
+
 - Never commit `.env.local` to Git (it's already in `.gitignore`)
 - For production (Vercel), add these as environment variables in your deployment settings
 
@@ -154,31 +163,37 @@ NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=your-verification-code-here
 After deployment, verify everything is working:
 
 ### Google Analytics:
+
 - [ ] Go to Google Analytics → Reports → Realtime
 - [ ] Visit your website in another tab
 - [ ] You should see yourself in the realtime report
 
 ### Google Tag Manager:
+
 - [ ] In GTM, click **"Preview"**
 - [ ] Enter your website URL
 - [ ] GTM debugger should open and show tags firing
 
 ### Google Search Console:
+
 - [ ] Check if verification is successful
 - [ ] Submit sitemap: `https://mtprime.fr/sitemap.xml`
 - [ ] Request indexing for main pages
 
 ### SEO Meta Tags:
+
 - [ ] Use [Google Rich Results Test](https://search.google.com/test/rich-results)
 - [ ] Test your homepage URL
 - [ ] Verify structured data is detected
 
 ### Mobile-Friendly Test:
+
 - [ ] Use [Mobile-Friendly Test](https://search.google.com/test/mobile-friendly)
 - [ ] Test your website URL
 - [ ] Should show "Page is mobile friendly"
 
 ### Sitemap Check:
+
 - [ ] Visit `https://mtprime.fr/sitemap.xml`
 - [ ] Should show all pages with proper alternates
 
@@ -187,7 +202,9 @@ After deployment, verify everything is working:
 ## 📊 Tracking What's Implemented
 
 ### Google Analytics 4 Events:
+
 The implementation automatically tracks:
+
 - **Page views** - Every page visit
 - **Scroll depth** - How far users scroll
 - **Outbound clicks** - Links to external sites
@@ -195,11 +212,12 @@ The implementation automatically tracks:
 - **Form submissions** - Contact form submissions
 
 ### Custom Events (You can add later):
+
 ```javascript
 // Example: Track button clicks
-gtag('event', 'button_click', {
-  'button_name': 'Contact Us',
-  'page_location': window.location.href
+gtag("event", "button_click", {
+  button_name: "Contact Us",
+  page_location: window.location.href,
 });
 ```
 
@@ -225,12 +243,14 @@ gtag('event', 'button_click', {
 ## 🎯 Next Steps for Better SEO
 
 ### Content:
+
 - [ ] Add blog/news section with regular updates
 - [ ] Create service-specific landing pages
 - [ ] Add customer testimonials and reviews
 - [ ] Include relevant keywords naturally in content
 
 ### Technical:
+
 - [ ] Set up Google Business Profile
 - [ ] Add social media links to structured data
 - [ ] Implement breadcrumb navigation
@@ -238,11 +258,13 @@ gtag('event', 'button_click', {
 - [ ] Create a blog with regular articles
 
 ### Performance:
+
 - [ ] Optimize images (use WebP format)
 - [ ] Enable Vercel Analytics
 - [ ] Set up monitoring with Google PageSpeed Insights
 
 ### Social Media:
+
 - [ ] Create social media profiles (LinkedIn, Facebook, Instagram)
 - [ ] Add social links to the footer
 - [ ] Update structured data with social URLs
@@ -261,6 +283,7 @@ gtag('event', 'button_click', {
 ## 🎉 You're All Set!
 
 Once you add the environment variables and deploy, your website will be:
+
 - ✅ Fully trackable by Google Analytics
 - ✅ Manageable via Google Tag Manager
 - ✅ Monitored in Google Search Console

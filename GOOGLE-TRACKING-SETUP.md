@@ -1,6 +1,7 @@
 # 🚀 Quick Google Tracking Setup
 
 ## ✅ What's Already Done
+
 - Analytics tracking code installed
 - Tag Manager integration ready
 - Search Console verification ready
@@ -74,6 +75,7 @@ pnpm dev
 Visit: **http://localhost:3000**
 
 Open browser console (F12) and check for:
+
 - No errors about missing tracking IDs
 - Google Analytics script loaded
 - Google Tag Manager script loaded
@@ -83,6 +85,7 @@ Open browser console (F12) and check for:
 ## 🚀 Step 5: Deploy to Production
 
 ### For Vercel:
+
 1. Push code to GitHub
 2. Go to Vercel Dashboard → Your Project → **Settings** → **Environment Variables**
 3. Add all three variables:
@@ -98,11 +101,13 @@ Open browser console (F12) and check for:
 ### After deployment, check:
 
 1. **Google Analytics** (after 24h):
+
    - Go to Analytics → Reports → Realtime
    - Visit your website
    - You should see yourself in realtime report
 
 2. **Google Search Console**:
+
    - Go back to verification page
    - Click **"Verify"**
    - Should show ✅ verified
@@ -118,6 +123,7 @@ Open browser console (F12) and check for:
 ## 📊 What You'll See After Setup
 
 ### Google Analytics Dashboard:
+
 - Real-time visitor count
 - Page views by URL
 - Traffic sources (Google, direct, social)
@@ -125,6 +131,7 @@ Open browser console (F12) and check for:
 - Device types (mobile, desktop)
 
 ### Google Search Console:
+
 - Search queries bringing traffic
 - Click-through rates
 - Indexing status
@@ -145,11 +152,13 @@ Open browser console (F12) and check for:
 ## 🆘 Troubleshooting
 
 **Analytics not showing data?**
+
 - Check `.env.local` has correct IDs
 - Restart dev server after adding IDs
 - Wait 24-48 hours for production data
 
 **Search Console verification failed?**
+
 - Make sure verification code is correct
 - Redeploy after adding the code
 - Try again after deployment completes
