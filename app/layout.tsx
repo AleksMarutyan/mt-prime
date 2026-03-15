@@ -118,6 +118,10 @@ export default function RootLayout({
     <html suppressHydrationWarning>
       <head>
         <meta
+          name="google-site-verification"
+          content="vFAnSmCkYdceQybgk70w4H-c0N6dMab91_ofHYJthJ8"
+        />
+        <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
